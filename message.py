@@ -3,7 +3,7 @@ from belief import Belief
 
 class Message:
     """Represents a message with strength and beliefs."""
-    def __init__(self, strength, beliefs, source, destination):
+    def __init__(self, strength, beliefs, source = None, destination = None):
         self.beliefs = beliefs
         self.strength = strength
         self.source = source
@@ -61,7 +61,8 @@ class Message:
 
     def __str__(self):
         """Returns a string representation of the message."""
-        message_str = f"Message Strength: {self.strength}\nBeliefs:\n"
+        message_str = f"Message Strength: {self.strength}\nSource: {self.source}\nDestination:{self.destination}\nBeliefs:\n"
         for belief in self.beliefs:
             message_str += str(belief) + "\n"
         return message_str
+    

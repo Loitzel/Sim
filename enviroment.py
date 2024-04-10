@@ -6,15 +6,22 @@ class Environment:
     _instance = None  # Class attribute to store the single instance
 
     def __new__(cls):
-        if cls._instance is None:
-            cls._instance = super().__new__(cls)
-            cls._instance.agents = {}  # Initialize agents dictionary
-        return cls._instance
-    
-    def __init__(self):
-        self.agents = {}  # Dictionary to store agents by their names
+        if not hasattr(cls, 'instance'):
+            cls.instance = super(Environment, cls).__new__(cls)
+            cls.instance.agents = {}  # Inicializa agentes aquí
+            cls.instance.replies = []  # Inicializa agentes aquí
 
-    def register_agent(self, agent):
+        return cls.instance
+
+    @classmethod
+    def get_instance(cls):
+        """Método para obtener la instancia única"""
+        if cls._instance is None:
+            cls._instance = Environment()
+        return cls._instance
+
+
+    def register_agent(self, agent : Agent):
         self.agents[agent.name] = agent
 
     def send_message(self, message : Message):
@@ -25,13 +32,14 @@ class Environment:
         messages = []
 
         for agent in initial_agents:
-            print(initial_message)
-            new_message = initial_message.clone().destination(agent)
+            new_message = initial_message.clone()
+            new_message.destination = agent.name
             messages.append(new_message)
 
         while messages:
             for message in messages:
                 if message.strength > 0:
+                    keys = list(self.agents.keys())
                     destiny_agent : Agent = self.agents[message.destination]
                     destiny_agent.receive_message(message)
                 messages.remove(message)

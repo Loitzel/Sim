@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 from message import Message
+from reporter import Reporter
 
 class AgentInterface(ABC):
     """Abstract base class for agent interfaces."""
@@ -39,6 +40,7 @@ class Agent(AgentInterface):
     def deliberate(self, message : Message, agreement, interest, common_topics):
         """Deliberates on whether to transmit, alter, or not transmit the message."""
         new_message : Message = message.clone()
+        agent_report = ''
 
         for rule in self.decision_rules:
             decision = rule.decide(self.beliefs, interest, agreement, message)
@@ -50,13 +52,18 @@ class Agent(AgentInterface):
                 if neighbor == message.source:
                     continue
                 new_message = message.clone()  # Create a copy for each neighbor
+                new_message.source = self.name
                 new_message.destination = neighbor
-                self.execute_action(new_message)
+                agent_report = rule.report(self.name, new_message)
+                self.execute_action(new_message, agent_report)
         
-    def execute_action(self, message):
+    def execute_action(self, message, agent_report):
         from enviroment import Environment
         environment = Environment()  # Access the singleton Environment
+        reporter = Reporter()
+        print(message)
         environment.send_message(message)
+        reporter.report(agent_report)
 
     def calculate_agreement_and_interest(self, agent_beliefs, message_beliefs):
         """Calculates agreement and interest between agent beliefs and message beliefs."""
@@ -72,3 +79,6 @@ class Agent(AgentInterface):
             agreement_scores[topic] = agreement_score
 
         return agreement_scores, len(common_topics), common_topics
+    
+    def __str__(self):
+        return self.name

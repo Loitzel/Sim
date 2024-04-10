@@ -15,7 +15,7 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
     # Generate agents and assign neighbors
     agents = []
 
-    enviroment = Environment()
+    enviroment = Environment.get_instance()
 
     for node in graph.nodes:
         # Store the agent as a node attribute
@@ -39,7 +39,7 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
     # Now, iterate again to populate neighbor agents
     for node in graph.nodes:
         agent = graph.nodes[node]['agent']
-        neighbors = [graph.nodes[neighbor]['agent'] for neighbor in graph.neighbors(node)]
+        neighbors = [graph.nodes[neighbor]['agent'].name for neighbor in graph.neighbors(node)]
         agent.neighbors = neighbors
 
     return agents, graph

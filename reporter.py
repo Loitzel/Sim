@@ -9,4 +9,5 @@ class Reporter:
 
     def report(self, message):
         with open(self.filename, "a") as file:
-            file.write(message + "\n")
+            print(message)
+            file.write(str(message) + "\n")

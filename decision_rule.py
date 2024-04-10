@@ -28,6 +28,11 @@ class AgreementWithMessageRule(DecisionRule):
     def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message):
         """Does not alter the message as it is transmitted without changes."""
         return message
+    
+    def report(self, agentName, newMessage = None):
+        report = f"{agentName}: Mensaje transmitido sin alteraciones debido a alto acuerdo e interés."  # Agrega el reporte
+        return report
+    
 
 class DisagreementWithMessageRule(DecisionRule):
     """Decision rule to not transmit the message if disagreement and interest are high."""
@@ -46,6 +51,11 @@ class DisagreementWithMessageRule(DecisionRule):
     def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message):
         """Does not alter the message as it is not transmitted."""
         return None
+    
+    def report(self, agentName, newMessage = None):
+        report = f"{agentName}: Mensaje no transmitido debido a alto desacuerdo e interés."
+        return report
+
 
 class AdjustMessageRule(DecisionRule):
     """Decision rule to adjust the message based on agreement and interest."""
@@ -62,7 +72,8 @@ class AdjustMessageRule(DecisionRule):
             return True  # Adjust the message
         else:
             return False  # Do not adjust the message
-
+        
+    
     def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message):
         """Alters the message based on agent beliefs and message agreement."""
         new_message = message.clone()
@@ -73,3 +84,7 @@ class AdjustMessageRule(DecisionRule):
                 new_message.decrease_belief(topic)
 
         return new_message
+    
+    def report(self, agentName, newMessage = None):
+        report = f"{agentName}: Mensaje ajustado debido a acuerdo moderado e interés.\nNuevo mensaje:\n{newMessage}"
+        return report
