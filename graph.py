@@ -18,11 +18,10 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
     enviroment = Environment.get_instance()
 
     for node in graph.nodes:
-        # Store the agent as a node attribute
-        belief1 = Belief(Topics.HEALTH_AND_WELLNESS.value, random.randint(-2, 2))
-        belief2 = Belief(Topics.TECHNOLOGY_AND_SOCIETY.value, random.randint(-2, 2))
-        belief3 = Belief(Topics.ENVIRONMENT_AND_SUSTAINABILITY.value, random.randint(-2, 2))
-        beliefs = [belief1, belief2, belief3]
+        all_topics = list(Topics)
+        num_beliefs = random.randint(1, 5)
+        selected_topics = random.sample(all_topics, num_beliefs)
+        beliefs = [Belief(topic.value, random.randint(-2, 2)) for topic in selected_topics]
         
         agree_rule = AgreementWithMessageRule()
         disagree_rule = DisagreementWithMessageRule()
