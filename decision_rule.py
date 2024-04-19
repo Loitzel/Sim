@@ -18,7 +18,10 @@ class AgreementWithMessageRule(DecisionRule):
         agreement_threshold = 0.5
         interest_threshold = 0.5
         
-        average_agreement = sum(message_agreement.values()) / len(message_agreement)
+        if len(message_agreement) == 0:
+            average_agreement = 0
+        else:
+            average_agreement = sum(message_agreement.values()) / len(message_agreement)
 
         if average_agreement > agreement_threshold and message_interest > interest_threshold:
             return True  # Transmit the message without alterations
@@ -41,7 +44,10 @@ class DisagreementWithMessageRule(DecisionRule):
         disagreement_threshold = -0.5
         interest_threshold = 0.5
 
-        average_agreement = sum(message_agreement.values()) / len(message_agreement)
+        if len(message_agreement) == 0:
+            average_agreement = 0
+        else:
+            average_agreement = sum(message_agreement.values()) / len(message_agreement)
 
         if average_agreement < disagreement_threshold and message_interest > interest_threshold:
             return True  # Do not transmit the message

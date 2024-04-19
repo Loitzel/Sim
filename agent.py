@@ -1,7 +1,7 @@
 from abc import ABC, abstractmethod
 from message import Message
 from reporter import Reporter
-
+from enviroment import Environment
 class AgentInterface(ABC):
     """Abstract base class for agent interfaces."""
     @abstractmethod
@@ -18,6 +18,7 @@ class AgentInterface(ABC):
     def execute_action(self, message):
         """Executes the action determined by the deliberation."""
         pass
+    
 
 
 class Agent(AgentInterface):
@@ -58,7 +59,6 @@ class Agent(AgentInterface):
                 self.execute_action(new_message, agent_report)
         
     def execute_action(self, message, agent_report):
-        from enviroment import Environment
         environment = Environment()  # Access the singleton Environment
         reporter = Reporter()
         print(message)

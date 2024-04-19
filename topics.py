@@ -1,5 +1,5 @@
 from enum import Enum
-
+import random
 
 class Topics(Enum):
     """Enum representing different topics."""
@@ -32,3 +32,17 @@ class Topics(Enum):
     SECURITY_AND_PROTECTION = "Security and protection"
     CREATIVITY_AND_ARTISTIC_EXPRESSION = "Creativity and artistic expression"
     LEARNING_AND_PERSONAL_DEVELOPMENT = "Learning and personal development"
+    
+    def select_random_topics(num_topics):
+        """Selects a random set of topics from the Topics enum.
+
+        Args:
+            num_topics: The number of topics to select.
+
+        Returns:
+            A list of randomly chosen Topics enum members.
+        """
+        all_topics = list(Topics)
+        random.shuffle(all_topics)  # Shuffle the list for random selection
+        return all_topics[:num_topics]
+

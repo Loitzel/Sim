@@ -23,13 +23,19 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         selected_topics = random.sample(all_topics, num_beliefs)
         beliefs = [Belief(topic.value, random.randint(-2, 2)) for topic in selected_topics]
         
+        # Nueva variable para almacenar el grado del agente (número de vecinos)
+        degree = graph.degree[node]
+
+        
         agree_rule = AgreementWithMessageRule()
         disagree_rule = DisagreementWithMessageRule()
         adjust_rule = AdjustMessageRule()
         decision_rules = [agree_rule, disagree_rule, adjust_rule]
         
-        agent = Agent(beliefs, decision_rules, [], name=f"Agent_{node}")  # Empty neighbors list for now
+        # Crea el agente con la importancia basada en el grado
+        importance = degree / num_agents  # Normaliza la importancia entre 0 y 1
         
+        agent = Agent(beliefs, decision_rules, [], name=f"Agent_{node}")  # Empty neighbors list for now
         enviroment.register_agent(agent)
         agents.append(agent)
         

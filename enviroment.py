@@ -1,4 +1,4 @@
-from agent import Agent
+# from agent import Agent
 from message import Message
 
 
@@ -21,7 +21,7 @@ class Environment:
         return cls._instance
 
 
-    def register_agent(self, agent : Agent):
+    def register_agent(self, agent ):
         self.agents[agent.name] = agent
 
     def send_message(self, message : Message):
@@ -30,7 +30,7 @@ class Environment:
 
     def run_simulation(self, initial_message : Message, initial_agents):
         messages = []
-
+        agents_notified = {}
         for agent in initial_agents:
             new_message = initial_message.clone()
             new_message.destination = agent.name
@@ -39,10 +39,19 @@ class Environment:
         while messages:
             for message in messages:
                 if message.strength > 0:
-                    keys = list(self.agents.keys())
-                    destiny_agent : Agent = self.agents[message.destination]
-                    destiny_agent.receive_message(message)
+                    try:
+                        agents_notified[self.agents[message.destination]]
+                        messages.remove(message)
+                        
+                        continue
+                    except:    
+                        agents_notified[self.agents[message.destination]] = True
+                        destiny_agent = self.agents[message.destination]
+                        destiny_agent.receive_message(message)
                 messages.remove(message)
                 
             messages.extend(self.replies)
             self.replies = []
+        
+        return len([agent for agent,val in agents_notified.items() if val == True])
+        
