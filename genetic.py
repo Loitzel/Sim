@@ -160,6 +160,20 @@ def genetic_algorithm(population_size, num_parents, num_generations, mutation_ra
         # Evaluar la población
         evaluate_population(population, initial_agents, objective_function)
 
+        
+        # Imprimir información de la generación
+        best_message = max(population, key=lambda message: message.result)
+
+        average_score = sum(message.result for message in population) / population_size
+
+        # print(best_message.result)
+        evolution_list.append(best_message.result)
+        average_list.append(average_score)
+
+
+        if global_best[1] < best_message.result:
+            global_best = (best_message, best_message.result)
+
         # Seleccionar padres
         parents = select_parents(population, num_parents)
 
@@ -175,20 +189,7 @@ def genetic_algorithm(population_size, num_parents, num_generations, mutation_ra
             # Agregar el hijo a la nueva población
             new_population.append(child)
 
-        # Imprimir información de la generación
-        best_message = max(population, key=lambda message: message.result)
-
-        average_score = sum(message.result for message in population) / population_size
-
-        # print(best_message.result)
-        evolution_list.append(best_message.result)
-        average_list.append(average_score)
-
-
-        if global_best[1] < best_message.result:
-            global_best = (best_message, best_message.result)
-
         # Reemplazar la población actual con la nueva generación
         population = new_population
 
-    return global_best[0], average_list
+    return global_best[0], evolution_list

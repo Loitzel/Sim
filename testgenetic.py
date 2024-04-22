@@ -38,4 +38,4 @@ def run_experiment(population_size = 20, num_parents = 5, num_generations = 100,
     plt.show()
     
 
-run_experiment(objective_function=notified_function)
+run_experiment(objective_function=agree_function)
