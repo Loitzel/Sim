@@ -8,6 +8,8 @@ class Message:
         self.strength = strength
         self.source = source
         self.destination = destination
+        self.result = 0
+        self.age = 0
     
     def _update_strength(self, delta):
         """Updates the strength of the message by adding delta."""
