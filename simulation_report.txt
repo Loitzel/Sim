@@ -18296,3 +18296,3216 @@ Destination:Agent_15
 Beliefs:
 Environment and sustainability: 1
 
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_0
+Beliefs:
+Food and nutrition: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_2
+Beliefs:
+Food and nutrition: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_19
+Beliefs:
+Food and nutrition: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_15
+Beliefs:
+Food and nutrition: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_16
+Beliefs:
+Food and nutrition: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_2
+Beliefs:
+Food and nutrition: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_5
+Beliefs:
+Food and nutrition: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_6
+Beliefs:
+Food and nutrition: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_1
+Beliefs:
+Food and nutrition: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_3
+Beliefs:
+Food and nutrition: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_0
+Beliefs:
+Food and nutrition: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_4
+Beliefs:
+Food and nutrition: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_14
+Beliefs:
+Food and nutrition: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_16
+Beliefs:
+Food and nutrition: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_13
+Beliefs:
+Food and nutrition: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_18
+Beliefs:
+Food and nutrition: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_5
+Beliefs:
+Food and nutrition: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_4
+Beliefs:
+Food and nutrition: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_8
+Beliefs:
+Food and nutrition: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_14
+Beliefs:
+Food and nutrition: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_11
+Beliefs:
+Food and nutrition: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_19
+Beliefs:
+Food and nutrition: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_2
+Beliefs:
+Food and nutrition: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_18
+Beliefs:
+Food and nutrition: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_16
+Destination:Agent_15
+Beliefs:
+Food and nutrition: 1
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_16
+Destination:Agent_17
+Beliefs:
+Food and nutrition: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_13
+Beliefs:
+Food and nutrition: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_12
+Beliefs:
+Food and nutrition: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_6
+Beliefs:
+Food and nutrition: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_4
+Beliefs:
+Food and nutrition: 1
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_12
+Beliefs:
+Food and nutrition: 1
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_14
+Beliefs:
+Food and nutrition: 1
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_11
+Beliefs:
+Food and nutrition: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_4
+Beliefs:
+Food and nutrition: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_3
+Beliefs:
+Food and nutrition: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_10
+Beliefs:
+Food and nutrition: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_8
+Beliefs:
+Food and nutrition: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_7
+Beliefs:
+Food and nutrition: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_9
+Beliefs:
+Food and nutrition: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_5
+Beliefs:
+Food and nutrition: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_10
+Beliefs:
+Food and nutrition: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_9
+Beliefs:
+Food and nutrition: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_13
+Beliefs:
+Food and nutrition: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_18
+Beliefs:
+Food and nutrition: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_0
+Beliefs:
+Food and nutrition: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_17
+Beliefs:
+Food and nutrition: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_5
+Beliefs:
+Food and nutrition: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_2
+Beliefs:
+Food and nutrition: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_14
+Beliefs:
+Food and nutrition: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_17
+Beliefs:
+Food and nutrition: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_19
+Beliefs:
+Food and nutrition: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_15
+Beliefs:
+Food and nutrition: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_18
+Beliefs:
+Food and nutrition: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_19
+Beliefs:
+Food and nutrition: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_12
+Destination:Agent_13
+Beliefs:
+Food and nutrition: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_12
+Destination:Agent_10
+Beliefs:
+Food and nutrition: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_9
+Beliefs:
+Food and nutrition: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_11
+Beliefs:
+Food and nutrition: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_12
+Beliefs:
+Food and nutrition: 2
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_7
+Destination:Agent_9
+Beliefs:
+Food and nutrition: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_8
+Beliefs:
+Food and nutrition: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_10
+Beliefs:
+Food and nutrition: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_7
+Beliefs:
+Food and nutrition: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_0
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_2
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_19
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_15
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_16
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_2
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_5
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_6
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_1
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_3
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_0
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_4
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_14
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_16
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_13
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_18
+Beliefs:
+Education and learning: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_5
+Beliefs:
+Education and learning: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_4
+Beliefs:
+Education and learning: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_8
+Beliefs:
+Education and learning: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_14
+Beliefs:
+Education and learning: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_11
+Beliefs:
+Education and learning: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_19
+Beliefs:
+Education and learning: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_2
+Beliefs:
+Education and learning: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_18
+Beliefs:
+Education and learning: 1
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_16
+Destination:Agent_15
+Beliefs:
+Education and learning: 1
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_16
+Destination:Agent_17
+Beliefs:
+Education and learning: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_13
+Beliefs:
+Education and learning: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_12
+Beliefs:
+Education and learning: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_6
+Beliefs:
+Education and learning: 1
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_4
+Beliefs:
+Education and learning: 1
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_12
+Beliefs:
+Education and learning: 1
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_14
+Beliefs:
+Education and learning: 1
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_11
+Beliefs:
+Education and learning: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_4
+Beliefs:
+Education and learning: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_3
+Beliefs:
+Education and learning: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_10
+Beliefs:
+Education and learning: 1
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_8
+Beliefs:
+Education and learning: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_7
+Beliefs:
+Education and learning: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_9
+Beliefs:
+Education and learning: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_5
+Beliefs:
+Education and learning: 1
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_10
+Beliefs:
+Education and learning: 1
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_9
+Beliefs:
+Education and learning: 1
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_13
+Beliefs:
+Education and learning: 1
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_18
+Beliefs:
+Education and learning: 1
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_0
+Beliefs:
+Education and learning: 1
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_17
+Beliefs:
+Education and learning: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_5
+Beliefs:
+Education and learning: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_2
+Beliefs:
+Education and learning: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_14
+Beliefs:
+Education and learning: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_17
+Beliefs:
+Education and learning: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_19
+Beliefs:
+Education and learning: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_15
+Beliefs:
+Education and learning: 1
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_18
+Beliefs:
+Education and learning: 1
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_19
+Beliefs:
+Education and learning: 1
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_12
+Destination:Agent_13
+Beliefs:
+Education and learning: 1
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_12
+Destination:Agent_10
+Beliefs:
+Education and learning: 1
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_9
+Beliefs:
+Education and learning: 1
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_11
+Beliefs:
+Education and learning: 1
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_12
+Beliefs:
+Education and learning: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_7
+Destination:Agent_9
+Beliefs:
+Education and learning: 1
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_8
+Beliefs:
+Education and learning: 1
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_10
+Beliefs:
+Education and learning: 1
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_7
+Beliefs:
+Education and learning: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_19
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_15
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_16
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_5
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_6
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_1
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_3
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_16
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_15
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_5
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_8
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_6
+Destination:Agent_11
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_19
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_16
+Destination:Agent_15
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_16
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_12
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_6
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_14
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_12
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_13
+Destination:Agent_11
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_3
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_5
+Destination:Agent_8
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_7
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_8
+Destination:Agent_5
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_11
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 2
+Transportation and mobility: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_5
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_4
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_19
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_15
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_19
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_12
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_12
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 1
+Transportation and mobility: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_11
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_10
+Destination:Agent_12
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_7
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_8
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_7
+Beliefs:
+Environment and sustainability: 0
+Transportation and mobility: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_0
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_2
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_3
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_19
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_4
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_2
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_4
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_1
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_8
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_1
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_3
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_0
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_4
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_18
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_0
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_17
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_19
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_2
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_18
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_12
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_3
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_2
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_6
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_15
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_7
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_9
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_6
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_10
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_17
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_16
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_0
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_5
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_7
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_8
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_6
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_5
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_9
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_10
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_16
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_18
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_15
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_11
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_10
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_14
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 1
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_14
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_13
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_17
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_9
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_12
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_7
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_16
+Destination:Agent_17
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_16
+Destination:Agent_14
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_5
+Destination:Agent_7
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_8
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_10
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_11
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_11
+Destination:Agent_9
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_11
+Destination:Agent_13
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_13
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_15
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_16
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_13
+Destination:Agent_14
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_13
+Destination:Agent_11
+Beliefs:
+Health and wellness: 2
+Food and nutrition: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_0
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_2
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_3
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_19
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_4
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_2
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_4
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_1
+Beliefs:
+Education and learning: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_8
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_1
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_3
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_0
+Beliefs:
+Education and learning: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_4
+Beliefs:
+Education and learning: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_18
+Beliefs:
+Education and learning: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_0
+Beliefs:
+Education and learning: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_17
+Beliefs:
+Education and learning: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_19
+Beliefs:
+Education and learning: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_2
+Beliefs:
+Education and learning: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_18
+Beliefs:
+Education and learning: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_12
+Beliefs:
+Education and learning: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_3
+Beliefs:
+Education and learning: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_2
+Beliefs:
+Education and learning: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_6
+Beliefs:
+Education and learning: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_15
+Beliefs:
+Education and learning: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_7
+Beliefs:
+Education and learning: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_9
+Beliefs:
+Education and learning: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_6
+Beliefs:
+Education and learning: 2
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_10
+Beliefs:
+Education and learning: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_17
+Beliefs:
+Education and learning: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_16
+Beliefs:
+Education and learning: 2
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_0
+Beliefs:
+Education and learning: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_5
+Beliefs:
+Education and learning: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_7
+Beliefs:
+Education and learning: 2
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_8
+Beliefs:
+Education and learning: 2
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_6
+Beliefs:
+Education and learning: 2
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_5
+Beliefs:
+Education and learning: 2
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_9
+Beliefs:
+Education and learning: 2
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_10
+Beliefs:
+Education and learning: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_16
+Beliefs:
+Education and learning: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_18
+Beliefs:
+Education and learning: 2
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_15
+Beliefs:
+Education and learning: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_11
+Beliefs:
+Education and learning: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_10
+Beliefs:
+Education and learning: 2
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_14
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_14
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_13
+Beliefs:
+Education and learning: 2
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_17
+Beliefs:
+Education and learning: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_9
+Beliefs:
+Education and learning: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_12
+Beliefs:
+Education and learning: 2
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_7
+Beliefs:
+Education and learning: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_16
+Destination:Agent_17
+Beliefs:
+Education and learning: 2
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_16
+Destination:Agent_14
+Beliefs:
+Education and learning: 2
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_5
+Destination:Agent_7
+Beliefs:
+Education and learning: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_8
+Beliefs:
+Education and learning: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_10
+Beliefs:
+Education and learning: 2
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_11
+Beliefs:
+Education and learning: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_11
+Destination:Agent_9
+Beliefs:
+Education and learning: 2
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_11
+Destination:Agent_13
+Beliefs:
+Education and learning: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_13
+Beliefs:
+Education and learning: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_15
+Beliefs:
+Education and learning: 2
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_16
+Beliefs:
+Education and learning: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_13
+Destination:Agent_14
+Beliefs:
+Education and learning: 2
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_13
+Destination:Agent_11
+Beliefs:
+Education and learning: 2
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_3
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_19
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_1: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_1
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_1
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_3: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_3
+Destination:Agent_8
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_1
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_3
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_2: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 5
+Source: Agent_2
+Destination:Agent_4
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_19: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_19
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_19
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_0: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_0
+Destination:Agent_12
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 2
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_3
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_2
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_6
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_4: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_4
+Destination:Agent_15
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_7
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_6
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_8: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 4
+Source: Agent_8
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_16
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_18: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_18
+Destination:Agent_0
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_5
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_7
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_6: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_6
+Destination:Agent_8
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_6
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_5
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_7: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_7
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 2
+Technology and gadgets: 1
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_16
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_18
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_17: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_17
+Destination:Agent_15
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_11
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_12: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_12
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_15: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_15
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_12
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_10: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 3
+Source: Agent_10
+Destination:Agent_7
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_16
+Destination:Agent_17
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_16: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_16
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_5: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_5
+Destination:Agent_7
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_8
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_10
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_9: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_9
+Destination:Agent_11
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_11
+Destination:Agent_9
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_11: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_11
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_13
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_15
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_14: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_14
+Destination:Agent_16
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_13
+Destination:Agent_14
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+
+Agent_13: Mensaje ajustado debido a acuerdo moderado e interés.
+Nuevo mensaje:
+Message Strength: 2
+Source: Agent_13
+Destination:Agent_11
+Beliefs:
+Environment and sustainability: 1
+Technology and gadgets: 0
+

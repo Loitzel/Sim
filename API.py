@@ -62,6 +62,7 @@ class TopicExtractor:
         print(response.text)
 
         topics_str = response.text.strip()  # Eliminar espacios en blanco
+        
         if topics_str and topics_str != "{}":
             # Eliminar el prefijo "Topics treated " y los espacios en blanco
             topics_str = topics_str.replace("Topics treated ", "").strip()  
