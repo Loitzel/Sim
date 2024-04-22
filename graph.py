@@ -1,11 +1,31 @@
 import random
 import networkx as nx
-
 from agent import Agent
 from belief import Belief
 from decision_rule import *
 from topics import Topics
 from enviroment import Environment
+import matplotlib.pyplot as plt
+
+def draw_graph(graph, node_color_property='degree'):
+    # Prepara los datos para el gráfico
+    node_colors = []
+    for node in graph.nodes:
+        if node_color_property == 'importance':
+            # Asume que el grado ya está normalizado y almacenado como 'importance'
+            node_colors.append(graph.nodes[node]['agent'].importance)
+        elif node_color_property == 'degree':
+            node_colors.append(graph.degree[node])
+        else:
+            raise ValueError(f"Invalid node_color_property: {node_color_property}")
+    
+    # Dibuja el grafo
+    plt.figure(figsize=(10, 10))
+    nx.draw(graph, with_labels=True, node_color=node_colors, cmap=plt.cm.Blues)
+    plt.title("Grafo de Agentes")
+    plt.show()
+
+# Ejemplo de uso
 
 
 def generate_agents_from_graph(num_agents, num_neighbors, probability):
@@ -46,5 +66,6 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         agent = graph.nodes[node]['agent']
         neighbors = [graph.nodes[neighbor]['agent'].name for neighbor in graph.neighbors(node)]
         agent.neighbors = neighbors
-
+    
+    #draw_graph(graph)
     return agents, graph

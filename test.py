@@ -16,15 +16,13 @@ environment = Environment.get_instance()  # Obtener la instancia del entorno (si
 for a in agents:
     environment.register_agent(a)
     
-
-  
 # initial_agent_indices = random.sample(range(num_agents), 3)  # Selecciona 3 agentes al azar
 initial_agent_indices = [1,2,3] 
 initial_agents = [agents[i] for i in initial_agent_indices]
-messages = dividir_y_guardar_textos("prompt.txt")
+result_msgs = dividir_y_guardar_textos("prompt.txt")
 
 sim_results = []
-for msg in messages:
+for text, msg in result_msgs:
     initial_message = Message(strength=5, beliefs=msg, source=None, destination=None) 
 
     sim_result = Simulation(msg)
