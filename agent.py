@@ -52,6 +52,7 @@ class Agent(AgentInterface):
             decision = rule.decide(self.beliefs, interest, agreement, message)
             if decision:
                 new_message = rule.alter(self.beliefs, common_topics, interest, agreement, message)
+                break
         
         if new_message is not None:
             for neighbor in self.neighbors:
