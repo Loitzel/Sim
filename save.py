@@ -13,11 +13,13 @@ def dividir_y_guardar_textos(archivo_entrada):
 
     topicE = TopicExtractor()
     for texto_parte in texto_completo.split('\n'):
-            
+        print("Text: ",texto_parte)
+        print("Topics: ")
+        
         msg = topicE.extract_topics(texto_parte)
         initial_beliefs = [Belief(topic[0],topic[1]) for topic in msg]
         if len(initial_beliefs) == 0:
             continue
-        result.append(initial_beliefs)
+        result.append((texto_parte,initial_beliefs))
         
     return result
