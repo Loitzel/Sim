@@ -1,4 +1,7 @@
 from abc import ABC, abstractmethod
+
+from message import Message
+from reporter import Reporter
 class DecisionRule(ABC):
     """Abstract base class for decision rules."""
     @abstractmethod
@@ -16,33 +19,37 @@ class AgreementWithMessageRule(DecisionRule):
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to transmit the message without alterations."""
         agreement_threshold = 0.5
-        interest_threshold = 0.5
+        interest_threshold = 1
+
         
         if len(message_agreement) == 0:
             average_agreement = 0
         else:
             average_agreement = sum(message_agreement.values()) / len(message_agreement)
 
-        if average_agreement > agreement_threshold and message_interest > interest_threshold:
+        if average_agreement == agreement_threshold and message_interest >= interest_threshold:
             return True  # Transmit the message without alterations
         else:
             return False  # Do not transmit the message
 
-    def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message):
+    def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message : Message):
         """Does not alter the message as it is transmitted without changes."""
-        return message
+        new_message = message.clone()
+        new_message.strength = new_message.strength + 4
+        return new_message
     
     def report(self, agentName, newMessage = None):
-        report = f"{agentName}: Mensaje transmitido sin alteraciones debido a alto acuerdo e interés."  # Agrega el reporte
+        reporter = Reporter()
+        reporter.reportAgreement(agentName)
+        report =f"{agentName} agrees!"
         return report
     
-
 class DisagreementWithMessageRule(DecisionRule):
     """Decision rule to not transmit the message if disagreement and interest are high."""
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to not transmit the message."""
         disagreement_threshold = -0.5
-        interest_threshold = 0.5
+        interest_threshold = 1
 
         if len(message_agreement) == 0:
             average_agreement = 0
@@ -62,13 +69,12 @@ class DisagreementWithMessageRule(DecisionRule):
         report = f"{agentName}: Mensaje no transmitido debido a alto desacuerdo e interés."
         return report
 
-
 class AdjustMessageRule(DecisionRule):
     """Decision rule to adjust the message based on agreement and interest."""
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to adjust the message."""
         agreement_moderation_range = (-0.5, 0.5)
-        interest_threshold = 0.5
+        interest_threshold = 1
         
         if len(message_agreement) == 0:
             return False  # No agreement in the message
@@ -94,3 +100,20 @@ class AdjustMessageRule(DecisionRule):
     def report(self, agentName, newMessage = None):
         report = f"{agentName}: Mensaje ajustado debido a acuerdo moderado e interés.\nNuevo mensaje:\n{newMessage}"
         return report
+
+class RandomDecisionRule(DecisionRule):
+    """Decision rule to randomly transmit the message."""
+    def decide(self, agent_beliefs, message_interest, message_agreement, message):
+        """Decides whether to transmit the message randomly."""
+        import random
+        return random.choice([False, True])  # Randomly decide to transmit or not   
+
+    def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message):
+        """Does not alter the message as it is transmitted without changes."""
+        return message.clone()
+    
+    def report(self, agentName, newMessage = None):
+        report = f"{agentName}: Mensaje transmitido aleatoriamente."
+        return report
+    
+

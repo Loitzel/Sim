@@ -39,7 +39,7 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
 
     for node in graph.nodes:
         all_topics = list(Topics)
-        num_beliefs = random.randint(1, 5)
+        num_beliefs = random.randint(1, 10)
         selected_topics = random.sample(all_topics, num_beliefs)
         beliefs = [Belief(topic.value, random.randint(-2, 2)) for topic in selected_topics]
         
@@ -50,7 +50,8 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         agree_rule = AgreementWithMessageRule()
         disagree_rule = DisagreementWithMessageRule()
         adjust_rule = AdjustMessageRule()
-        decision_rules = [agree_rule, disagree_rule, adjust_rule]
+        random_rule = RandomDecisionRule()
+        decision_rules = [agree_rule, adjust_rule, disagree_rule]
         
         # Crea el agente con la importancia basada en el grado
         importance = degree / num_agents  # Normaliza la importancia entre 0 y 1

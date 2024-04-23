@@ -8,6 +8,8 @@ class Message:
         self.strength = strength
         self.source = source
         self.destination = destination
+        self.result = 0
+        self.age = 0
     
     def _update_strength(self, delta):
         """Updates the strength of the message by adding delta."""
@@ -57,7 +59,9 @@ class Message:
 
     def clone(self):
         """Returns a copy of the message."""
-        return Message(self.strength, self.beliefs.copy(), self.source, self.destination)
+        clone = Message(self.strength, self.beliefs.copy(), self.source, self.destination)
+        clone.result = self.result
+        return clone
 
     def __str__(self):
         """Returns a string representation of the message."""
