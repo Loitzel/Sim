@@ -1,7 +1,11 @@
 from abc import ABC, abstractmethod
 from typing import Dict,List
 from message import Message
+
 from belief import Belief
+
+from reporter import Reporter
+
 class DecisionRule(ABC):
     """Abstract base class for decision rules."""
     @abstractmethod
@@ -24,14 +28,15 @@ class AgreementWithMessageRule(DecisionRule):
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to transmit the message without alterations."""
         agreement_threshold = 0.5
-        interest_threshold = 0.5
+        interest_threshold = 1
+
         
         if len(message_agreement) == 0:
             average_agreement = 0
         else:
             average_agreement = sum(message_agreement.values()) / len(message_agreement)
 
-        if average_agreement > agreement_threshold and message_interest > interest_threshold:
+        if average_agreement == agreement_threshold and message_interest >= interest_threshold:
             return True  # Transmit the message without alterations
         else:
             return False  # Do not transmit the message
@@ -43,7 +48,9 @@ class AgreementWithMessageRule(DecisionRule):
         return new_message
     
     def report(self, agentName, newMessage = None):
-        report = f"{agentName}: Mensaje transmitido sin alteraciones debido a alto acuerdo e interés."  # Agrega el reporte
+        reporter = Reporter()
+        reporter.reportAgreement(agentName)
+        report =f"{agentName} agrees!"
         return report
     
 class DisagreementWithMessageRule(DecisionRule):
@@ -53,7 +60,7 @@ class DisagreementWithMessageRule(DecisionRule):
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to not transmit the message."""
         disagreement_threshold = -0.5
-        interest_threshold = 0.5
+        interest_threshold = 1
 
         if len(message_agreement) == 0:
             average_agreement = 0
@@ -80,7 +87,7 @@ class AdjustMessageRule(DecisionRule):
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to adjust the message."""
         agreement_moderation_range = (-0.5, 0.5)
-        interest_threshold = 0.5
+        interest_threshold = 1
         
         if len(message_agreement) == 0:
             return False  # No agreement in the message

@@ -59,7 +59,9 @@ class Message:
 
     def clone(self):
         """Returns a copy of the message."""
-        return Message(self.strength, self.beliefs.copy(), self.source, self.destination)
+        clone = Message(self.strength, self.beliefs.copy(), self.source, self.destination)
+        clone.result = self.result
+        return clone
 
     def __str__(self):
         """Returns a string representation of the message."""

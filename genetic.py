@@ -10,7 +10,10 @@ from topics import Topics
 def get_notified_agents_count():
     reporter = Reporter()
     return len(reporter._notified_agents)
-
+def get_agreement_agents_count():
+    reporter = Reporter()
+    return len(reporter._agreed_agents)
+    
 def generate_random_messages(num_messages, num_topics_per_message):
     population = []
     for _ in range(num_messages):
@@ -38,30 +41,31 @@ def generate_messages_with_specific_topics(topics, num_messages):
         population.append(message)
     return population
 
-def evaluate_population(population, initial_agents):
+def evaluate_population(population, initial_agents, objective_function):
     environment = Environment.get_instance()
     for message in population:
         reporter = Reporter()
         # Ejecutar la simulación para cada mensaje
         environment.run_simulation(message, initial_agents)
-        num_notified_agents = get_notified_agents_count()
+        score = objective_function()
         reporter = Reporter()
         reporter.Reset()
 
         # Almacenar el resultado (cantidad de agentes notificados)
-        message.result = num_notified_agents
-        return num_notified_agents
+        message.result = score
 
 def select_parents(population, num_parents):
     """Selecciona los padres con base en el atributo 'result' de los mensajes."""
     # Ordenar la población por el atributo 'result' (de mayor a menor)
     population.sort(key=lambda message: message.result, reverse=True)
-
+    print([message.result for message in population])
+    
     # Seleccionar los primeros 'num_parents' mensajes como padres
     parents = population[:num_parents]
+    print([message.result for message in parents])
     return parents
 
-def crossover(parent1, parent2):
+def crossover1(parent1, parent2):
     """Realiza el cruce entre dos padres y combina creencias."""
     beliefs1 = parent1.beliefs
     beliefs2 = parent2.beliefs
@@ -90,6 +94,28 @@ def crossover(parent1, parent2):
 
     return child_message
 
+def crossover2(parent1, parent2):
+    '''Mix of both parents beliefs randomly'''
+    beliefs1 = parent1.beliefs
+    beliefs2 = parent2.beliefs
+
+    #promedio entero de la cantidad de beliefs de los padres
+    amount = (len(beliefs1) + len(beliefs2)) // 2
+
+    #mezcla de beliefs de ambos padres
+    child_beliefs = []
+    while len(child_beliefs) < amount:
+        for belief in beliefs1:
+            if random.random() < 0.5:
+                child_beliefs.append(belief)
+        for belief in beliefs2:
+            if random.random() < 0.5:
+                child_beliefs.append(belief)
+
+    child_message = Message(strength=5, beliefs=child_beliefs)
+
+    return child_message
+            
 def mutate(message, mutation_rate=0.1):
     """Aplica mutaciones al mensaje."""
     mutated_beliefs = []
@@ -115,23 +141,37 @@ def mutate(message, mutation_rate=0.1):
 
 def reproduce(parent1, parent2, global_best, mutation_rate=0.1):
     """Realiza el cruce y la mutación para crear un nuevo hijo."""
-    if global_best is None:
-        child_message = crossover(parent1, parent2)
-    else:
-        child_message = crossover(parent1, global_best)
-
+    child_message = crossover2(parent1, parent2)
     mutated_child = mutate(child_message, mutation_rate)
     return mutated_child
 
-def genetic_algorithm(population_size, num_parents, num_generations, mutation_rate, initial_agents):
+def genetic_algorithm(population_size, num_parents, num_generations, mutation_rate, initial_agents, objective_function = get_notified_agents_count):
     # Generar la población inicial
     population = generate_random_messages(population_size, num_topics_per_message=5)
     global_best = (None, 0)
     evolution_list = []
+    average_list = []
 
+    previous_best = None
     for generation in range(num_generations):
+        print(generation)
         # Evaluar la población
-        evaluate_population(population, initial_agents)
+        evaluate_population(population, initial_agents, objective_function)
+
+        if previous_best is not None:
+            population = population + previous_best
+        # Imprimir información de la generación
+        best_message = max(population, key=lambda message: message.result)
+
+        average_score = sum(message.result for message in population) / population_size
+
+        # print(best_message.result)
+        evolution_list.append(best_message.result)
+        average_list.append(average_score)
+
+
+        if global_best[1] < best_message.result:
+            global_best = (best_message, best_message.result)
 
         # Seleccionar padres
         parents = select_parents(population, num_parents)
@@ -148,16 +188,9 @@ def genetic_algorithm(population_size, num_parents, num_generations, mutation_ra
             # Agregar el hijo a la nueva población
             new_population.append(child)
 
-            # Imprimir información de la generación
-        best_message = max(population, key=lambda message: message.result)
-        print(best_message.result)
-        evolution_list.append(best_message.result)
-
-
-        if global_best[1] < best_message.result:
-            global_best = (best_message, best_message.result)
-
         # Reemplazar la población actual con la nueva generación
+        previous_best = population[:5]
+        # population = generate_random_messages(population_size, num_topics_per_message=5)
         population = new_population
 
     return global_best[0], evolution_list

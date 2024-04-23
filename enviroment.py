@@ -40,7 +40,7 @@ class Environment:
 
     def run_simulation(self, initial_message : Message, initial_agents):
         messages = []
-
+        agents_notified = {}
         for agent in initial_agents:
             new_message = initial_message.clone()
             new_message.destination = agent.name
@@ -60,5 +60,6 @@ class Environment:
 
             messages.extend(self.replies)
             self.replies = []
-
+        
+        return len([agent for agent,val in agents_notified.items() if val == True])
         

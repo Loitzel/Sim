@@ -1,6 +1,7 @@
 class Reporter:
     _instance = None
     _notified_agents = set()
+    _agreed_agents = set()
 
     def __new__(cls):
         if cls._instance is None:
@@ -18,9 +19,11 @@ class Reporter:
         self._notified_agents.add(agent_name)
         # print(f"AgentCount: {len(self._notified_agents)}")
 
-
+    def reportAgreement(self, agent_name):
+        self._agreed_agents.add(agent_name)
 
     def Reset(self):
         self._notified_agents.clear()
+        self._agreed_agents.clear()
 
         

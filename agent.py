@@ -2,6 +2,8 @@ from abc import ABC, abstractmethod
 from message import Message
 from reporter import Reporter
 from decision_rule import AdjustBeliefsRule
+from enviroment import Environment
+
 class AgentInterface(ABC):
     """Abstract base class for agent interfaces."""
     @abstractmethod
@@ -61,6 +63,7 @@ class Agent(AgentInterface):
             decision = rule.decide(self.beliefs, interest, agreement, message)
             if decision:
                 new_message = rule.alter(self.beliefs, common_topics, interest, agreement, message)
+                break
         
         if new_message is not None:
             for neighbor in self.neighbors:
@@ -73,8 +76,6 @@ class Agent(AgentInterface):
                 self.execute_action(new_message, agent_report)
         
     def execute_action(self, message, agent_report):
-        
-        from enviroment import Environment
         environment = Environment()  # Access the singleton Environment
         
         reporter = Reporter()
