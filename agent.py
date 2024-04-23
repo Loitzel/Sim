@@ -1,7 +1,9 @@
 from abc import ABC, abstractmethod
 from message import Message
 from reporter import Reporter
+from decision_rule import AdjustBeliefsRule
 from enviroment import Environment
+
 class AgentInterface(ABC):
     """Abstract base class for agent interfaces."""
     @abstractmethod
@@ -19,6 +21,10 @@ class AgentInterface(ABC):
         """Executes the action determined by the deliberation."""
         pass
     
+    @abstractmethod
+    def to_dict(self):
+        pass
+    
 
 
 class Agent(AgentInterface):
@@ -30,18 +36,23 @@ class Agent(AgentInterface):
         self.decision_rules = decision_rules  # Decision rules for deliberation
         self.neighbors = neighbors  # Add neighbors attribute
 
-
+    def to_dict(self):
+        return { 'name' : self.name,
+        'beliefs' : [str(belief) for belief in self.beliefs],  # Agent's beliefs
+        'neighbors' : self.neighbors}  # Add neighbors attribute
+        
     def receive_message(self, original_message: Message):
         """Receives a message and initiates the deliberation process."""
         reporter = Reporter()
         reporter.reportAgent(self.name)
+        adjustBelief = AdjustBeliefsRule()
 
         message = original_message.clone()
 
         message_beliefs = message.get_beliefs()
         agent_beliefs = {belief.topic: belief.opinion for belief in self.beliefs}
-
         agreement_with_message, interest_on_message, common_topics = self.calculate_agreement_and_interest(agent_beliefs, message_beliefs)
+        adjustBelief.change(self.beliefs,interest_on_message,agreement_with_message,message_beliefs)
         self.deliberate(message, agreement_with_message, interest_on_message, common_topics)
 
     def deliberate(self, message : Message, agreement, interest, common_topics):
