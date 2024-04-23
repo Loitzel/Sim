@@ -1,6 +1,7 @@
 from abc import ABC, abstractmethod
-
+from typing import Dict,List
 from message import Message
+from belief import Belief
 class DecisionRule(ABC):
     """Abstract base class for decision rules."""
     @abstractmethod
@@ -12,8 +13,13 @@ class DecisionRule(ABC):
     def alter(self, agent_beliefs, common_topics, message_interest, message_agreement, message):
         """Alters the message based on agent beliefs and message agreement."""
         pass
-    
+    @abstractmethod
+    def __str__(self):
+        return ""
 class AgreementWithMessageRule(DecisionRule):
+    def __str__(self):
+        return super().__str__()
+        
     """Decision rule to transmit the message without alterations if agreement and interest are high."""
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to transmit the message without alterations."""
@@ -40,8 +46,9 @@ class AgreementWithMessageRule(DecisionRule):
         report = f"{agentName}: Mensaje transmitido sin alteraciones debido a alto acuerdo e interés."  # Agrega el reporte
         return report
     
-
 class DisagreementWithMessageRule(DecisionRule):
+    def __str__(self):
+        return super().__str__()
     """Decision rule to not transmit the message if disagreement and interest are high."""
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to not transmit the message."""
@@ -66,8 +73,9 @@ class DisagreementWithMessageRule(DecisionRule):
         report = f"{agentName}: Mensaje no transmitido debido a alto desacuerdo e interés."
         return report
 
-
 class AdjustMessageRule(DecisionRule):
+    def __str__(self):
+        return super().__str__()
     """Decision rule to adjust the message based on agreement and interest."""
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to adjust the message."""
@@ -100,6 +108,8 @@ class AdjustMessageRule(DecisionRule):
         return report
 
 class RandomDecisionRule(DecisionRule):
+    def __str__(self):
+        return super().__str__()
     """Decision rule to randomly transmit the message."""
     def decide(self, agent_beliefs, message_interest, message_agreement, message):
         """Decides whether to transmit the message randomly."""
@@ -113,5 +123,25 @@ class RandomDecisionRule(DecisionRule):
     def report(self, agentName, newMessage = None):
         report = f"{agentName}: Mensaje transmitido aleatoriamente."
         return report
-    
 
+class AdjustBeliefsRule():
+
+    """Decision rule to adjust the message based on agreement and interest."""
+    def change(self, agent_beliefs: List[Belief], message_interest, message_agreement, message: Message):
+        
+        if len(message_agreement) == 0:
+            return
+        else:
+            for topic,opinion in message.items():
+                try:
+                    belief = [agent_bel for agent_bel in agent_beliefs if agent_bel.opinion == opinion] 
+                    if len(belief) > 0:
+                        belief = belief[0]
+                        if opinion >= 1:
+                            belief.opinion = min(2, opinion + 1)
+                        elif opinion <= -1:
+                            belief.opinion = max(-2, opinion - 1)
+                except KeyError:
+                    agent_beliefs.append(Belief(topic,opinion))
+        return
+    

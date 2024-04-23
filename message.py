@@ -1,10 +1,10 @@
 from belief import Belief
-
+from typing import List
 
 class Message:
     """Represents a message with strength and beliefs."""
     def __init__(self, strength, beliefs, source = None, destination = None):
-        self.beliefs = beliefs
+        self.beliefs:List[Belief] = beliefs
         self.strength = strength
         self.source = source
         self.destination = destination
