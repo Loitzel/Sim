@@ -141,11 +141,7 @@ def mutate(message, mutation_rate=0.1):
 
 def reproduce(parent1, parent2, global_best, mutation_rate=0.1):
     """Realiza el cruce y la mutación para crear un nuevo hijo."""
-    if global_best is None:
-        child_message = crossover2(parent1, parent2)
-    else:
-        child_message = crossover2(parent1, global_best)
-
+    child_message = crossover2(parent1, parent2)
     mutated_child = mutate(child_message, mutation_rate)
     return mutated_child
 
@@ -156,11 +152,14 @@ def genetic_algorithm(population_size, num_parents, num_generations, mutation_ra
     evolution_list = []
     average_list = []
 
+    previous_best = None
     for generation in range(num_generations):
+        print(generation)
         # Evaluar la población
         evaluate_population(population, initial_agents, objective_function)
 
-        
+        if previous_best is not None:
+            population = population + previous_best
         # Imprimir información de la generación
         best_message = max(population, key=lambda message: message.result)
 
@@ -190,6 +189,8 @@ def genetic_algorithm(population_size, num_parents, num_generations, mutation_ra
             new_population.append(child)
 
         # Reemplazar la población actual con la nueva generación
+        previous_best = population[:5]
+        # population = generate_random_messages(population_size, num_topics_per_message=5)
         population = new_population
 
     return global_best[0], evolution_list

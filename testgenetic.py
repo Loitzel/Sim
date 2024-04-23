@@ -7,7 +7,7 @@ from genetic import get_agreement_agents_count as agree_function
 from genetic import get_notified_agents_count as notified_function
 
 
-def run_experiment(population_size = 20, num_parents = 5, num_generations = 100, mutation_rate = 0.1, num_agents = 500, num_neighbors = 4, probability = 0.2, objective_function = notified_function):
+def run_experiment(population_size = 30, num_parents = 10, num_generations = 100, mutation_rate = 0.1, num_agents = 300, num_neighbors = 4, probability = 0.2, objective_function = notified_function):
 
     agents, _ = generate_agents_from_graph(num_agents, num_neighbors, probability)
 
