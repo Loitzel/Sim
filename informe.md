@@ -61,3 +61,9 @@ El objetivo del agente es encontrar parejas compatibles entre los demás agentes
         - Mutación: Cada creencia del padre se modifica con una probabilidad p.
 
     Este proceso se repite durante un número específico de generaciones, permitiendo que los mensajes evolucionen y se ajusten para mejorar su capacidad de ser adoptados por la mayoría de los agentes en el sistema. Al final del proceso, el algoritmo retorna el mejor mensaje encontrado y una lista de los mejores resultados a lo largo de las generaciones. 
+
+![](./Examples/Figure_1.png)
+![](./Examples/Figure_2_parents.png)
+![](./Examples/Figure_3_mutation_rate.png)
+![](./Examples/Figure_4_probability.png)
+![](./Examples/Figure_5_num_neighborgs.png)
