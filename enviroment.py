@@ -1,5 +1,4 @@
 # from agent import Agent
-from agent import Agent
 from message import Message
 
 
@@ -23,7 +22,7 @@ class Environment:
         return cls._instance
 
 
-    def register_agent(self, agent : Agent, setOriginal = False):
+    def register_agent(self, agent, setOriginal = False):
 
         if setOriginal:
             self.originalAgents[agent.name] = agent.clone
@@ -53,7 +52,7 @@ class Environment:
                 break
             for message in messages:
                 if message.strength > 0:
-                    destiny_agent : Agent = self.agents[message.destination]
+                    destiny_agent = self.agents[message.destination]
                     destiny_agent.receive_message(message)
                 messages.remove(message)
             

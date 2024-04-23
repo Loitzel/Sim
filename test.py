@@ -55,5 +55,5 @@ for text, msg in result_msgs:
     sim_results.append(sim_result)
     print("-----------------------------------------------------C")
 #algoritmo_genetico(sim_results,10,5,10,0.25) 
-cupid = Cupid(graph)
+cupid = Cupid(graph,0.2)
 print(cupid.solucion_emparejamientos)
