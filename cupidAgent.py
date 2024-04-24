@@ -5,6 +5,7 @@ from agent import Agent
 from enviroment import Environment
 from belief import Belief
 from typing import List
+from itertools import product
 
 class Cupid():
     """Clase de agente que puede resolver problemas de satisfacción de restricciones (CSP) para emparejamientos."""
@@ -36,7 +37,7 @@ class Cupid():
         def calcular_similitud(creencias_agente1: List[Belief], creencias_agente2: List[Belief]):
             # Calcula la similitud basada en la coincidencia de opiniones de los temas
             coincidencias = sum(1 if abs(valor1.opinion - valor2.opinion) <= 1 else 0 # Ajuste aquí para usar la diferencia absoluta
-                                for valor1, valor2 in zip(creencias_agente1, creencias_agente2) 
+                                for valor1, valor2 in list(product(creencias_agente1, creencias_agente2)) 
                                 if valor1.topic == valor2.topic)
             similitud = coincidencias / max(len(creencias_agente1),len(creencias_agente2))
             return similitud

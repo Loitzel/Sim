@@ -102,4 +102,5 @@ class Agent(AgentInterface):
         return Agent(self.beliefs, self.decision_rules, self.neighbors, self.name)
     
     def __str__(self):
-        return self.name
+        return f'{self.name} \n{[(belief.topic, belief.opinion) for belief in self.beliefs]}'
+                
