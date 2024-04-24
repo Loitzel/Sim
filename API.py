@@ -59,7 +59,6 @@ class TopicExtractor:
 
         # Genera la respuesta
         response = self.model.generate_content(prompt_parts)
-        print(response.text)
 
         topics_str = response.text.strip()  # Eliminar espacios en blanco
         
