@@ -11,3 +11,6 @@ class Belief:
     def get_belief(self):
         """Returns the belief as a tuple (topic, opinion)."""
         return (self.topic, self.opinion)
+    
+    def __eq__(self, value: object) -> bool:
+        return self.topic == value.topic

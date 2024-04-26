@@ -4,26 +4,33 @@
 El objetivo principal de este proyecto es desarrollar un sistema que, a través de la simulación de la propagación de un mensaje, permita evaluar y mejorar la estructura de los mensajes de comunicación. Este enfoque se basa en la premisa de que la simulación puede proporcionar una plataforma para experimentar con diferentes estructuras de mensajes y analizar cómo estas afectan la adopción del mensaje por parte de los agentes en un sistema. Al hacerlo, este proyecto busca contribuir a la comprensión de cómo los mensajes pueden ser diseñados para ser más efectivos en términos de consenso y adopción.
 
 ### **Representación de problema**
-Representación de una red social, donde los nodos son personas y los enlaces son la relación entre ellos.
+
+Representación de una red social a través de un grafo de mundo pequenno, donde los nodos son personas y los enlaces son la relación entre ellos.
 - ``Grafo de mundo pequeño``:  Grafo para el que la mayoría de los nodos no son vecinos entre sí y sin embargo la mayoría de los nodos pueden ser alcanzados desde cualquier nodo origen a través de un número relativamente corto de saltos entre ellos. 
+Las redes sociales suelen exhibir propiedades de mundo pequeño, como alta conectividad, breves distancias medias y alto agrupamiento local. Estas propiedades se reflejan en la estructura de un grafo de mundo pequeño, lo que lo convierte en una representación adecuada de la red social real.
 
 ### **Representacionde los agentes: `class Agent`**
 
-La clase Agent define la estructura y el comportamiento de los agentes individuales en la simulación. Cada agente posee un conjunto de creencias, reglas de decisión y una red de vecinos con los que interactúa. Al recibir un mensaje, el agente lo analiza mediante la deliberación, utilizando sus creencias, interés en el tema y acuerdo con el mensaje para decidir si transmitirlo, alterarlo o descartarlo. La acción elegida se ejecuta enviando el mensaje modificado (o un nuevo mensaje) a sus vecinos y reportando el resultado. Esta clase permite modelar agentes con diversos comportamientos y explorar cómo estos influyen en la propagación de información en la red.
+La clase Agent define la estructura y el comportamiento de los agentes individuales en la simulación. 
+Cada agente posee un conjunto de creencias, reglas de decisión y una red de vecinos con los que interactúa. Al recibir un mensaje, el agente lo analiza mediante la deliberación, utilizando sus creencias, interés en el tema y acuerdo con el mensaje para decidir si transmitirlo, alterarlo o descartarlo. La acción elegida se ejecuta enviando el mensaje modificado (o un nuevo mensaje) a sus vecinos y reportando el resultado; de esta forma es posible modelar agentes con diversos comportamientos y explorar cómo estos influyen en la propagación de información en la red.
+
+- ``Creencias (Beliefs)``: Cada creencia esta compuesta por:
+    - Tema: Tema del mensaje que prepresenta.
+    - Opinion: Valor numérico que representa, en el caso de los agentes, si tiene una opinión favorable o desfavorable respecto al tema (ej.: positivo, negativo, neutral, representado numéricamnete en el rango discreto de -2 a 2).
 
 ### **Representacion de un mensaje: `class Message`**
 
 - ``Composición del Mensaje:``
 
     -`` Fuerza:`` Valor numérico que indica aproximadamente cuánto baja en DFS un mensaje en el grafo.
-    - ``Creencias:`` Lista de objetos `Belief` que representan los temas abordados en el mensaje y las opiniones asociadas a cada uno (ej.: positivo, negativo, neutral representado numéricamnete en el rango discreto de -2 a 2).
+    - ``Creencias:`` Conjunto de `Belief` que representan los temas abordados en el mensaje y las opiniones asociadas a cada uno (ej.: positivo, negativo, neutral, representado numéricamnete en el rango discreto de -2 a 2).
     - ``Origen y Destino:`` Identificadores que indican el emisor y receptor del mensaje, respectivamente.
 
 - ``Funcionalidades:``
 Permite modificar el valor numérico que representa la importancia del mensaje y proporciona métodos para cambiar la opinión sobre un tema específico o fortalecer/debilitar la intensidad de dicha opinión. Habilita la generación de una réplica exacta del mensaje original para preservar información o crear variaciones.
 
 ### **Modificacion de un mensaje: `class DecisionRule`** 
-- ``Reglas de decision:``
+- ``Reglas de decision:`` Cada regla de decisión define de forma unica la manera de alterar un mensaje en dependencia de la decision que define la regla (de acuerdo, en desacuerdo, intermedio).
 
     - ``AgreementWithMessageRule ``(Transmitir sin Alterar): Transmite el mensaje sin cambios si hay un alto acuerdo e interés en los temas.
     - ``DisagreementWithMessageRule`` (No Transmitir): No transmite el mensaje si hay un alto desacuerdo en los temas y el interés es alto (evita propagar información con la que   no están de acuerdo los agentes).
@@ -53,6 +60,7 @@ El objetivo del agente es encontrar parejas compatibles entre los demás agentes
 
 
 ### **Componente de búsqueda: ``Algoritmo Genético``**
+
 - ``genetic_algorithm()``:
     - El algoritmo genético se inicia generando una población inicial de mensajes de manera aleatoria.
     - En cada generación, el algoritmo evalúa la "aptitud" de cada mensaje en la población basado en el grado de propagación del mensaje mediante la funcion ``get_notified_agents_count()`` o en el nivel de aceptación del mensaje a través de la funcion `get_agreement_agents_count()`. 

@@ -5,6 +5,7 @@ from save import dividir_y_guardar_textos
 from metaheuristic import algoritmo_genetico, Simulation
 from belief import Belief
 import json,joblib
+from community_detector import get_highly_endorsed_messages 
 
 # num_agents = 20  # Número de agentes
 # num_neighbors = 4  # Número de vecinos por agente

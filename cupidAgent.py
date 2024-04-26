@@ -5,6 +5,7 @@ from agent import Agent
 from enviroment import Environment
 from belief import Belief
 from typing import List
+from itertools import product
 
 class Cupid():
     """Clase de agente que puede resolver problemas de satisfacción de restricciones (CSP) para emparejamientos."""
