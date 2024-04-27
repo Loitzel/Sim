@@ -1,0 +1,440 @@
+{
+  "agents": [
+    {
+      "name": "Agent_0",
+      "beliefs": [
+        "Health and wellness: -2"
+      ],
+      "neighbors": [
+        "Agent_2",
+        "Agent_18"
+      ]
+    },
+    {
+      "name": "Agent_1",
+      "beliefs": [
+        "Culture and traditions: 0",
+        "Creativity and artistic expression: 1",
+        "Travel and tourism: -1",
+        "Technology and society: 2",
+        "Leisure and entertainment: 2",
+        "Environment and sustainability: -1",
+        "Justice and human rights: -1",
+        "Politics and government: -2",
+        "Religion and spirituality: 1"
+      ],
+      "neighbors": [
+        "Agent_2",
+        "Agent_3",
+        "Agent_19"
+      ]
+    },
+    {
+      "name": "Agent_2",
+      "beliefs": [
+        "History and heritage: -1",
+        "Transportation and mobility: 1",
+        "Beauty and personal care: 0",
+        "Technology and society: 0",
+        "Leisure and entertainment: 1",
+        "Home and domestic life: -1",
+        "Economy and finance: -2",
+        "Environment and sustainability: 0"
+      ],
+      "neighbors": [
+        "Agent_1",
+        "Agent_0",
+        "Agent_8",
+        "Agent_14",
+        "Agent_12"
+      ]
+    },
+    {
+      "name": "Agent_3",
+      "beliefs": [
+        "Home and domestic life: -2",
+        "Learning and personal development: -2",
+        "Sports and physical activity: 1",
+        "Religion and spirituality: 1",
+        "Economy and finance: 0",
+        "Security and protection: -2",
+        "Creativity and artistic expression: 0",
+        "Communication and media: 2",
+        "Work and career: -2"
+      ],
+      "neighbors": [
+        "Agent_4",
+        "Agent_1",
+        "Agent_12"
+      ]
+    },
+    {
+      "name": "Agent_4",
+      "beliefs": [
+        "Beauty and personal care: -1",
+        "Education and learning: -1",
+        "Sports and physical activity: 1",
+        "Communication and media: 0"
+      ],
+      "neighbors": [
+        "Agent_3",
+        "Agent_6",
+        "Agent_19"
+      ]
+    },
+    {
+      "name": "Agent_5",
+      "beliefs": [
+        "Food and nutrition: 2"
+      ],
+      "neighbors": [
+        "Agent_6",
+        "Agent_7",
+        "Agent_9"
+      ]
+    },
+    {
+      "name": "Agent_6",
+      "beliefs": [
+        "Creativity and artistic expression: 2",
+        "Justice and human rights: 2",
+        "Community and society: -1",
+        "Environment and sustainability: -2"
+      ],
+      "neighbors": [
+        "Agent_5",
+        "Agent_7",
+        "Agent_4",
+        "Agent_8"
+      ]
+    },
+    {
+      "name": "Agent_7",
+      "beliefs": [
+        "Community and society: 0",
+        "Justice and human rights: -2",
+        "Learning and personal development: -2",
+        "Culture and traditions: 2",
+        "Technology and society: 2"
+      ],
+      "neighbors": [
+        "Agent_6",
+        "Agent_8",
+        "Agent_5",
+        "Agent_9"
+      ]
+    },
+    {
+      "name": "Agent_8",
+      "beliefs": [
+        "Education and learning: 2",
+        "Food and nutrition: -2",
+        "Leisure and entertainment: 1",
+        "Environment and sustainability: -1",
+        "Home and domestic life: 2",
+        "Innovation and entrepreneurship: 2",
+        "Security and protection: 2"
+      ],
+      "neighbors": [
+        "Agent_7",
+        "Agent_9",
+        "Agent_6",
+        "Agent_2",
+        "Agent_11"
+      ]
+    },
+    {
+      "name": "Agent_9",
+      "beliefs": [
+        "Home and domestic life: 2",
+        "Health and wellness: 2",
+        "Money and personal finance: 1",
+        "Community and society: 0",
+        "Fashion and style: 2",
+        "Religion and spirituality: 0"
+      ],
+      "neighbors": [
+        "Agent_8",
+        "Agent_10",
+        "Agent_7",
+        "Agent_5"
+      ]
+    },
+    {
+      "name": "Agent_10",
+      "beliefs": [
+        "Travel and tourism: 1"
+      ],
+      "neighbors": [
+        "Agent_9",
+        "Agent_11",
+        "Agent_12"
+      ]
+    },
+    {
+      "name": "Agent_11",
+      "beliefs": [
+        "Learning and personal development: 0",
+        "Justice and human rights: 2",
+        "Health and wellness: -1",
+        "Politics and government: -1",
+        "Fashion and style: 0",
+        "Religion and spirituality: 2"
+      ],
+      "neighbors": [
+        "Agent_10",
+        "Agent_12",
+        "Agent_13",
+        "Agent_8"
+      ]
+    },
+    {
+      "name": "Agent_12",
+      "beliefs": [
+        "Money and personal finance: 0",
+        "Technology and gadgets: -1",
+        "Food and nutrition: 0",
+        "Economy and finance: -2"
+      ],
+      "neighbors": [
+        "Agent_11",
+        "Agent_13",
+        "Agent_10",
+        "Agent_3",
+        "Agent_2"
+      ]
+    },
+    {
+      "name": "Agent_13",
+      "beliefs": [
+        "Art and creativity: 0",
+        "History and heritage: 1",
+        "Education and learning: -1",
+        "Creativity and artistic expression: 2",
+        "Community and society: 2",
+        "Home and domestic life: 0"
+      ],
+      "neighbors": [
+        "Agent_12",
+        "Agent_11",
+        "Agent_15",
+        "Agent_18"
+      ]
+    },
+    {
+      "name": "Agent_14",
+      "beliefs": [
+        "Fashion and style: 0",
+        "Communication and media: -1"
+      ],
+      "neighbors": [
+        "Agent_13",
+        "Agent_15",
+        "Agent_16",
+        "Agent_2"
+      ]
+    },
+    {
+      "name": "Agent_15",
+      "beliefs": [
+        "Beauty and personal care: 0",
+        "Religion and spirituality: -1"
+      ],
+      "neighbors": [
+        "Agent_16",
+        "Agent_13",
+        "Agent_17"
+      ]
+    },
+    {
+      "name": "Agent_16",
+      "beliefs": [
+        "Science and discoveries: -2",
+        "Education and learning: -1",
+        "Work and career: 1",
+        "Security and protection: 2",
+        "Environment and sustainability: 1",
+        "Health and wellness: 1",
+        "Technology and society: 1",
+        "Community and society: 1",
+        "Justice and human rights: -2",
+        "Fashion and style: 2"
+      ],
+      "neighbors": [
+        "Agent_15",
+        "Agent_17",
+        "Agent_14",
+        "Agent_18"
+      ]
+    },
+    {
+      "name": "Agent_17",
+      "beliefs": [
+        "Innovation and entrepreneurship: -1",
+        "Art and creativity: 2",
+        "Culture and traditions: 1",
+        "Learning and personal development: -1",
+        "Community and society: -2",
+        "Science and discoveries: 0",
+        "Leisure and entertainment: -2",
+        "Religion and spirituality: 2",
+        "Environment and sustainability: 1",
+        "Travel and tourism: 1"
+      ],
+      "neighbors": [
+        "Agent_16",
+        "Agent_18",
+        "Agent_15",
+        "Agent_19"
+      ]
+    },
+    {
+      "name": "Agent_18",
+      "beliefs": [
+        "Health and wellness: 1",
+        "Fashion and style: 2",
+        "Art and creativity: -1",
+        "Learning and personal development: 0"
+      ],
+      "neighbors": [
+        "Agent_17",
+        "Agent_16",
+        "Agent_0",
+        "Agent_13"
+      ]
+    },
+    {
+      "name": "Agent_19",
+      "beliefs": [
+        "Justice and human rights: -2",
+        "Money and personal finance: -1",
+        "Travel and tourism: 2",
+        "Education and learning: 1",
+        "Sports and physical activity: -1"
+      ],
+      "neighbors": [
+        "Agent_0",
+        "Agent_17",
+        "Agent_1",
+        "Agent_4"
+      ]
+    }
+  ],
+  "graph": {
+    "Agent_0": [
+      "Agent_2",
+      "Agent_18"
+    ],
+    "Agent_1": [
+      "Agent_2",
+      "Agent_3",
+      "Agent_19"
+    ],
+    "Agent_2": [
+      "Agent_1",
+      "Agent_0",
+      "Agent_8",
+      "Agent_14",
+      "Agent_12"
+    ],
+    "Agent_3": [
+      "Agent_4",
+      "Agent_1",
+      "Agent_12"
+    ],
+    "Agent_4": [
+      "Agent_3",
+      "Agent_6",
+      "Agent_19"
+    ],
+    "Agent_5": [
+      "Agent_6",
+      "Agent_7",
+      "Agent_9"
+    ],
+    "Agent_6": [
+      "Agent_5",
+      "Agent_7",
+      "Agent_4",
+      "Agent_8"
+    ],
+    "Agent_7": [
+      "Agent_6",
+      "Agent_8",
+      "Agent_5",
+      "Agent_9"
+    ],
+    "Agent_8": [
+      "Agent_7",
+      "Agent_9",
+      "Agent_6",
+      "Agent_2",
+      "Agent_11"
+    ],
+    "Agent_9": [
+      "Agent_8",
+      "Agent_10",
+      "Agent_7",
+      "Agent_5"
+    ],
+    "Agent_10": [
+      "Agent_9",
+      "Agent_11",
+      "Agent_12"
+    ],
+    "Agent_11": [
+      "Agent_10",
+      "Agent_12",
+      "Agent_13",
+      "Agent_8"
+    ],
+    "Agent_12": [
+      "Agent_11",
+      "Agent_13",
+      "Agent_10",
+      "Agent_3",
+      "Agent_2"
+    ],
+    "Agent_13": [
+      "Agent_12",
+      "Agent_11",
+      "Agent_15",
+      "Agent_18"
+    ],
+    "Agent_14": [
+      "Agent_13",
+      "Agent_15",
+      "Agent_16",
+      "Agent_2"
+    ],
+    "Agent_15": [
+      "Agent_16",
+      "Agent_13",
+      "Agent_17"
+    ],
+    "Agent_16": [
+      "Agent_15",
+      "Agent_17",
+      "Agent_14",
+      "Agent_18"
+    ],
+    "Agent_17": [
+      "Agent_16",
+      "Agent_18",
+      "Agent_15",
+      "Agent_19"
+    ],
+    "Agent_18": [
+      "Agent_17",
+      "Agent_16",
+      "Agent_0",
+      "Agent_13"
+    ],
+    "Agent_19": [
+      "Agent_0",
+      "Agent_17",
+      "Agent_1",
+      "Agent_4"
+    ]
+  }
+}
