@@ -1,6 +1,3 @@
-from constraint import Problem
-import numpy as np
-from typing import Dict, List
 import pulp
 from typing import Dict, List, Tuple
 
@@ -10,14 +7,11 @@ from message import Message
 from belief import Belief
 from enviroment import Environment
 from reporter import Reporter
-from typing import Dict
 class Cupid:
-    # _creencias_de_todos_agentes: Dict[Agent, List[Belief]]
-    # solucion_emparejamientos: str
-    # _matches: Dict[int, int] # New dictionary to track matches
+    _creencias_de_todos_agentes: Dict[int, List[Belief]]
+    solucion_emparejamientos: str
 
     def __init__(self, grafo_agentes,porcentajeEmparejamiento):
-        self._matches = dict() # Initialize the matches dictionary
         self._creencias_de_todos_agentes: Dict[int, List[Belief]] = self._obtener_creencias_agentes(grafo_agentes)
         self.solucion_emparejamientos = self._encontrar_emparejamientos(porcentajeEmparejamiento)
 
@@ -32,7 +26,7 @@ class Cupid:
 
         return creencias_agentes
 
-    def _encontrar_emparejamientos(self,porcentaje_emparejamiento):
+    def _encontrar_emparejamientos(self,porcentaje_emparejamiento) -> str:
         
         def calcular_similitud(creencias_agente1, creencias_agente2):
             coincidencias = 0
@@ -46,38 +40,59 @@ class Cupid:
             similitud = coincidencias / max(len(creencias_agente1), len(creencias_agente2))
             return similitud
 
-        problem = Problem()
-        for agent in self._creencias_de_todos_agentes.keys():
-            problem.addVariable(agent, range(len(self._creencias_de_todos_agentes.keys())))
+        # Crear el problema de programación lineal entera
+        problema = pulp.LpProblem("Emparejamiento", pulp.LpMaximize)
+        pulp.LpSolverDefault.msg = False
 
-        def match_constraint(agent1, agent2):
-            if agent1 == agent2:
-                return False
-            # Verifica si el agente1 ya tiene un emparejamiento
-            if agent1 in self._matches and self._matches[agent1] is not None or agent1 in self._matches.values():
-                return False
-            # Verifica si el agente2 ya tiene un emparejamiento
-            if agent2 in self._matches and self._matches[agent2] is not None or agent2 in self._matches.values():
-                return False
-            # Calcula la similitud y verifica si es mayor o igual al umbral
-            similitud = calcular_similitud(self._creencias_de_todos_agentes[agent1], self._creencias_de_todos_agentes[agent2]) 
-            if similitud >= porcentaje_emparejamiento:
-                print(f"{agent1} - {agent2} similitud = {similitud}")
-            return similitud >= porcentaje_emparejamiento
-
-        for agent1 in self._creencias_de_todos_agentes.keys():
-            for agent2 in self._creencias_de_todos_agentes.keys():
-                if agent1 != agent2:
-                    problem.addConstraint(match_constraint, [agent1, agent2])
-
+        # Variables de decisión
+        emparejamientos = pulp.LpVariable.dicts("Emparejamiento",
+                                               ((agente1, agente2) 
+                                                for agente1 in self._creencias_de_todos_agentes 
+                                                for agente2 in self._creencias_de_todos_agentes 
+                                                #if agente1 < agente2
+                                                ),
+                                               cat='Binary')
         
-        solution = problem.getSolution()
-        for agent1, agent2 in solution.items():
-            if agent1 != agent2 and (agent1, agent2) not in self._matches.items():
-                self._matches[agent1] = agent2
-                self._matches[agent2] = agent1
+        # Introducir una variable de decisión adicional para la similitud
+        similitud = pulp.LpVariable.dicts("Similitud",
+                                          ((agente1, agente2)
+                                           for agente1 in self._creencias_de_todos_agentes
+                                           for agente2 in self._creencias_de_todos_agentes
+                                           if agente1 < agente2),
+                                          cat='Binary')
+        # Función objetivo
+        problema += pulp.lpSum(emparejamientos[agente1, agente2]
+                           for agente1 in self._creencias_de_todos_agentes 
+                           for agente2 in self._creencias_de_todos_agentes
+                           if agente1 != agente2
+                           )
+        
+        # Restricciones  
+       
+       #Similitud
+        for agente1 in self._creencias_de_todos_agentes:
+            for agente2 in self._creencias_de_todos_agentes:
+                if agente1 != agente2:
+                    sim = calcular_similitud(self._creencias_de_todos_agentes[agente1],self._creencias_de_todos_agentes[agente2])
+                    # y luego establecer una restricción basada en esta similitud y la variable de decisión similitud
+                    # Por ejemplo, si la similitud es mayor que un umbral, entonces similitud[agente1, agente2] = 1
+                    # Esto es solo un esquema y necesitarás ajustarlo según tu lógica de similitud
+                    if sim < porcentaje_emparejamiento:
+                        problema+= emparejamientos[agente1, agente2] == 1
 
-        return self._matches
+        # Resolver el problema
+        problema.solve()
+
+        # Representación de la solución
+        if pulp.LpStatus[problema.status] == 'Optimal':
+            # Si se encuentra una solución óptima, devolverla como antes
+            parejas_logradas = sum(1 for valor in emparejamientos.values() if valor.varValue == 1)
+            #solucion = [f"Agente_{agente1} - Agente_{agente2} {calcular_similitud(self._creencias_de_todos_agentes[agente1], self._creencias_de_todos_agentes[agente2])}" for (agente1, agente2), valor in emparejamientos.items() if valor.varValue == 1]
+            #print("\n".join(solucion))
+            print(parejas_logradas)
+            return parejas_logradas
 
 
-
+def get_result(graph):
+    cupid = Cupid(graph,0.6)
+    return cupid.solucion_emparejamientos

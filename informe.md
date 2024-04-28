@@ -470,7 +470,7 @@ A continuación, se presentan gráficos que ilustran una comparativa de los resu
 
 **Observamos que el incremento en el número de generaciones mejora la efectividad de ambos algoritmos, sin embargo es este efecto más evidente en el algoritmo genético. La métrica: Cantidad de agentes a los que llega el mensaje, refleja este comportamiento, mostrando un rendimiento superior con mayor cantidad de generaciones.**
 
-<small>En la carpeta Ejemplos puede encontrar los datos anteriormente expuestos extendidos con una colección de grafias (output_image_agree.rar y output_images_notified.rar) que muestran de forma más clara los resultados obtenidos. Es importante que el análisis de las gráficas sea en función del máximo alcanzado por la función graficada y no de los valores de la función en cada punto del espacio evaluado.</small>
+<small>En la carpeta Ejemplos puede encontrar los datos anteriormente expuestos extendidos con una colección de grafias (output_image_agree_function.rar y output_images_notified_function.rar) que muestran de forma más clara los resultados obtenidos. Es importante que el análisis de las gráficas sea en función del máximo alcanzado por la función graficada y no de los valores de la función en cada punto del espacio evaluado.</small>
 
 ### Recomendaciones:
 - <strong>Análisis exhaustivo de parámetros</strong>: Realizar un estudio profundo de los parámetros que influyen en cada métrica definida. Esto implica identificar los parámetros relevantes, sus rangos de valores válidos y su impacto en el comportamiento de la métrica.
