@@ -93,9 +93,9 @@ Este proceso se repite durante un número específico de generaciones, permitien
 ### Comparaciones para evaluar correctitud :
 - Métrica: Cantidad de agentes que estan de acuerdo con el mensaje.
 ![Mpetrica : Cantidad de agentes que estan de acuerdo con el mensaje](./Examples/fig_1.jpg)
-![](./Examples/fig_2_parents.jpg)
-![](./Examples/fig_3_mutation_rate.jpg)
-![](./Examples/fige_4_probability.jpg)
+![](./Examples/fig_2.jpg)
+![](./Examples/fig_3.jpg)
+![](./Examples/fige_4.jpg)
 ![](./Examples/fig_5.jpg)
 
 ### Recomendaciones:

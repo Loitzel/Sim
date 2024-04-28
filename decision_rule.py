@@ -141,7 +141,7 @@ class AdjustBeliefsRule():
         if len(message_agreement) == 0:
             return
         else:
-            for topic,opinion in message.items():
+            for topic, opinion in message.items():
                 # try:
                 #     belief = [agent_bel for agent_bel in agent_beliefs if agent_bel.opinion == opinion] 
                 #     if len(belief) > 0:

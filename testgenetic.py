@@ -77,6 +77,12 @@ def run_adapt(number_of_iterations = 5, population_size = 30, num_parents = 5, n
 
 # run_adapt(objective_function=agree_function, num_constant_bests=2)
 #Este es el del cupido
+run_genetic(population_size = 30, num_parents = 5, num_generations = 10, mutation_rate = 0.5, num_agents = 50, num_neighbors = 2, probability = 0.5, objective_function = get_result, num_constant_bests = 3)
+#run_genetic(population_size = 30, num_parents = 10, num_generations = 100, mutation_rate = 0.5, num_agents = 300, num_neighbors = 4, probability = 0.2, objective_function = notified_function, num_constant_bests = 1)
+#run_genetic(population_size = 30, num_parents = 8, num_generations = 75, mutation_rate = 0.5, num_agents = 200, num_neighbors = 4, probability = 0.2, objective_function = agree_function, num_constant_bests = 2)
+#run_genetic(population_size = 50, num_parents = 10, num_generations = 70, mutation_rate = 0.7, num_agents = 100, num_neighbors = 4, probability = 0.5, objective_function = notified_function, num_constant_bests = 3)
+#run_genetic(population_size = 30, num_parents = 5, num_generations = 85, mutation_rate = 0.5, num_agents = 500, num_neighbors = 7, probability = 0.6, objective_function = get_result(0.8), num_constant_bests = 1)
+#run_genetic(population_size = 30, num_parents = 7, num_generations = 60, mutation_rate = 0.5, num_agents = 300, num_neighbors = 7, probability = 0.4, objective_function = agree_function, num_constant_bests = 1)
 # run_adapt(objective_function=get_result, num_constant_bests=2)
 
 prompt ="Las multinacionales multimillonarias son pilares de la economía global. Generan empleo, promueven la innovación y contribuyen al desarrollo económico. Su escala les permite optimizar recursos y ofrecer una amplia gama de productos y servicios. Además, lideran en investigación y desarrollo, colaboran en responsabilidad social corporativa y fomentan el progreso científico y tecnológico. En resumen, su impacto positivo en la sociedad es significativo y multifacético."
