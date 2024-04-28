@@ -5,13 +5,18 @@ from enviroment import Environment
 from message import Message
 from reporter import Reporter
 from topics import Topics
-
+from agent import Agent
+from cupidCSP import Cupid
 def get_notified_agents_count(_):
     reporter = Reporter()
     return len(reporter._notified_agents)
 def get_agreement_agents_count(_):
     reporter = Reporter()
     return len(reporter._agreed_agents)
+
+def get_unpairable_pairs(grafo):
+    result = Cupid(grafo,0.3)
+    return result.solucion_emparejamientos
     
 def generate_random_messages(num_messages, num_topics_per_message):
     population = []
