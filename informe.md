@@ -1,4 +1,8 @@
 # Informe
+### Autores:
+- Loitzel Ernesto Morales Santiestebans C311
+- Leonardo Javier Ramirez Calatayud C311
+- Naomi Lahera Champagne C311
 ### Campos:
 - IA 
 - Simulación 
@@ -46,7 +50,6 @@ Al recibir un mensaje, el agente lo analiza mediante la deliberación, utilizand
 
 ### **Modelo de simulación: Determinista**
 El comportamiento del sistema está completamente determinado por las condiciones iniciales y las reglas de la simulación. Representa la red social, los agentes, sus interacciones y la propagación de mensajes.
-<!-- El proyecto simula un entorno donde los agentes interactúan entre sí intercambiando mensajes. Cada mensaje tiene un tema y una valoración numérica que indica la opinión sobre el tema. Los agentes poseen creencias sobre los temas y reglas de decisión que determinan cómo reaccionan a los mensajes recibidos; siendo la clase `Enviroment` el centro de la simulación. Esta clase representa el entorno en el que se desarrolla la interacción entre los agentes. Su diseño utilizando el patrón *Singleton* garantiza que exista una única instancia del entorno de la simulación en todo el programa, asegurando una ejecución controlada y consistente (algo similar pasa con la clase `Report`). -->
 
 ### **Ejecución de la simulación**
 
@@ -72,7 +75,6 @@ Siendo nuestro objetvivo maximixar los resultados de una métrica específica en
 `Temas que se quieren incluir en el mensaje resultante`: {'Home and domestic life': -2, 'Technology andsociety': 0, 'Transportation and mobility': -1} \
 ``Mensaje resultante``:  Mientras navegamos por los cambios que se estánproduciendo en la educación, es esencial considerar el impacto en el hogary la vida familiar. Las   metodologías y tecnologías emergentes debenmejorar y complementar el entorno de aprendizaje en el hogar, fomentandola interacción familiar y la participación activa    en el viaje educativode los niños. Si bien la tecnología puede mejorar la accesibilidad, nodebe aislar a los estudiantes de las conexiones humanas y lasexperiencias    del mundo real. Además, debemos abordar las disparidadesen el acceso a la tecnología y garantizar que todos los estudiantes tenganlas mismas oportunidades de    beneficiarse de estas innovaciones,independientemente de sus circunstancias. Al equilibrar el papel de latecnología con el valor de las interacciones humanas y el   apoyofamiliar, podemos crear un sistema educativo que empodere a losestudiantes y enriquezca sus vidas dentro y fuera del aula."
 - `Libreria google.generativeai`: Permite la creación de aplicaciones de IA generativa basada en modelos de última generación como Gemini, de Google AI.
-<!-- - ``Uso``: Obtención de un mensaje estructurado a partir de un mensaje en lenguaje natural y viceversa (con un mensaje alterado obtención de un mensaje en lenguaje natural). -->
 
 ### **Componente de conocimiento: `class Cupid`**
 Nuestro objetivo es, a través de un problema de optimización lineal, buscar la cantidad máxima de emparejamientos excluyentes que podemos formar con los agentes una vez terminada la simulación siendo esta la función objetivo. Cada agente puede estar en un único emparejamineto y su similitud debe tener un umbral predefinido que podemos variar en dependencia de las interrogantes que tengamos.
@@ -90,16 +92,399 @@ Partiendo de la hipótesis de que la combinación de dos mensajes cercanos al "�
 
 Este proceso se repite durante un número específico de generaciones, permitiendo que los mensajes evolucionen y se ajusten para mejorar su capacidad de ser adoptados por la mayoría de los agentes en el sistema. Al final del proceso, el algoritmo retorna el mejor mensaje encontrado y una lista de los mejores resultados a lo largo de las generaciones. 
 
-### Comparaciones para evaluar correctitud :
-- Métrica: Cantidad de agentes que estan de acuerdo con el mensaje.
-![Mpetrica : Cantidad de agentes que estan de acuerdo con el mensaje](./Examples/fig_1.jpg)
-![](./Examples/fig_2.jpg)
-![](./Examples/fig_3.jpg)
-![](./Examples/fige_4.jpg)
-![](./Examples/fig_5.jpg)
+### Comparaciones para evaluar correctitud : 
+A continuación, se presentan gráficos que ilustran una comparativa de los resultados obtenidos por el algoritmo genético y el algoritmo aleatorio. Es importante destacar que la interpretación de dichos gráficos no se basa en un análisis de los valores para cada generación, sino que se centra en la identificación de los valores máximos alcanzados por las funciones evaluadas. 
+- Métrica: Cantidad de agentes a los quellega el mensaje. \
+![Cantidad de agentes a los quellega el mensaje.](./Ejemplos/fig_1_notified.jpg)
+
+- Métrica: Cantidad de agentes que estan de acuerdo con el mensaje. \
+![Mpetrica : Cantidad de agentes que estan de acuerdo con el mensaje](./Ejemplos/fig_2_agree.jpg)
+
+- Métrica: Cantidad de emparejamientos excluyentes que se pueden formar en función de la similitud de creencias de los agentes. \
+![Cantidad de emparejamientos excluyentes que se pueden formar en función de la similitud de creencias de los agentes.](./Ejemplos/fig_3_cupid.jpg)
+
+### Variacón de resultados al alterar parámetros
+- Variación de la cantidad de agentes en la simulación con unsa tasa de mutación de 0.2 y con 50 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>99 %</td>
+            <td>94 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>67 % </td>
+            <td>57, 6 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>51 %</td>
+            <td>41 %</td>
+          </tr>
+          </table>
+
+            El algoritmo genético generalmente supera al random en términos de      rendimiento  superandolo en un 10% de efectividad. Sin embargo el       rendimiento de ambos    algoritmos decrece al aumentar la cantidad de      agentes y mantener el númerode   generaciones cuando estamos    optimizando     el nivel de difusión de un mensaje.
+
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>79 %</td>
+            <td>74 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>45, 6 % </td>
+            <td>42, 6 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>30, 4 %</td>
+            <td>30, 4 %</td>
+          </tr>
+        </table>
+
+            Ambos algoritmos muestran un rendimiento similar. El random, a pesar    de     su  sencillez, logra un nivel de acuerdo similar al algoritmo   genético, el  cual es   más complejo. Esto indica que el algoritmo    aleatorio podría ser    una opción    viable en escenarios donde la    complejidad y recursos     computacionales son   limitados.
+
+- Variación de la cantidad de agentes en la simulación con unsa tasa de mutación de 0.5 y con 50 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>95 %</td>
+            <td>95 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>73, 3 % </td>
+            <td>60 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>46 %</td>
+            <td>40 %</td>
+          </tr>
+        </table>
+
+            Los resultados sugieren que la cantidad de agentes tiene un     impacto         significativo en la capacidad de ambos algoritmos para  alcanzar a todos     los     agentes en el grafo. El algoritmo   genético muestra un mejor     rendimiento     general, pero su    efectividad también se ve afectada por la  cantidad de agentes.
+
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>82 %</td>
+            <td>86 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>43, 6 % </td>
+            <td>43, 3 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>29, 6 %</td>
+            <td>29, 4 %</td>
+          </tr>
+        </table>
+
+            Los porcentajes de agentes que están de acuerdo con el mensaje son  relativamente bajos en todos los casos, incluso para la cantidad más     pequeña de agentes y no se observan diferencias significativas en los   resultados de los algoritmos comparados.
+
+- Variación de la cantidad de agentes en la simulación con unsa tasa de mutación de 0.8 y con 50 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>99 %</td>
+            <td>98 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>64, 3 % </td>
+            <td>54, 6 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>47, 6 %</td>
+            <td>39, 8 %</td>
+          </tr>
+          </table>
+
+            En comunidades pequeñas, las diferencias entre los algoritmos son mínimas. Sin          embargo, en comunidades de mayor tamaño, el algoritmo genético puede llegar a            superar al algoritmo aleatorio hasta en un 10%. A pesar de esta ventaja, ambos            algoritmos muestran una tendencia decreciente en el alcance del mensaje a          medida que aumenta la cantidad de agentes en la simulación.
+
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>79 %</td>
+            <td>76 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>44 % </td>
+            <td>45, 6 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>30 %</td>
+            <td>37, 4 %</td>
+          </tr>
+        </table>
+
+            Se observa una tendencia decreciente en el porcentaje de agentes    que     están de acuerdo con el mensaje a medida que aumenta la    cantidad de agentes para ambos algoritmos.
+
+- Variación de la cantidad de agentes en la simulación con unsa tasa de mutación de 0.2 y con 100 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>98 %</td>
+            <td>97 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>75, 6 % </td>
+            <td>51 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>56, 6 %</td>
+            <td>43 %</td>
+          </tr>
+          </table>
+
+            El algoritmo genético demuestra una ventaja significativa en la mayoría de los casos analizados.
+
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>82 %</td>
+            <td>79 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>48, 3 % </td>
+            <td>42, 6 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>28 %</td>
+            <td>29, 4 %</td>
+          </tr>
+        </table>
+
+            Los datos presentados en la tabla muestran un rendimiento similar del algoritmo genético y el random en cuanto a la cantidad de agentes que están de acuerdo con el mensaje. Si bien el algoritmo genético presenta una leve ventaja en algunos casos, las diferencias son pequeñas.
+
+- Variación de la cantidad de agentes en la simulación con unsa tasa de mutación de 0.5 y con 100 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>98 %</td>
+            <td>100 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>74, 6 % </td>
+            <td>61, 3 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>56 %</td>
+            <td>42, 6 %</td>
+          </tr>
+        </table>
+
+            Los datos en la tabla muestran un rendimiento mixto del algoritmo genético          comparado con el algoritmo aleatorio
+
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>79 %</td>
+            <td>79 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>42, 3 % </td>
+            <td>42, 3 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>29 %</td>
+            <td>28, 4 %</td>
+          </tr>
+        </table>
+
+            Las diferencias entre los resultados son casi imperceptibles.
+
+- Variación de la cantidad de agentes en la simulación con unsa tasa de mutación de 0.8 y con 100 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>97 %</td>
+            <td>94 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>75 % </td>
+            <td>57, 3 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>61, 6 %</td>
+            <td>43, 2 %</td>
+          </tr>
+          </table>
+
+            Se observa mayor eficiencia del algoritmo genético.
+
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
+        <table>
+          <tr>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>100</td>
+            <td>80 %</td>
+            <td>86 % </td>
+          </tr>
+          <tr>
+            <td>300</td>
+            <td>42, 3 % </td>
+            <td>43 %</td>
+          </tr>
+          <tr>
+            <td>500</td>
+            <td>27, 8 %</td>
+            <td>26, 6 %</td>
+          </tr>
+        </table>
+
+            La diferencia entre los resultados de ambos algoritmos es casi imperceptible.
+
+- Variación de cantidad de agentes en la simulacion y tasa de mutación con 
+150 generaciones.
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Tasa de Mutación</th>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>0.2</td>
+            <td>100</td>
+            <td>100 %</td>
+            <td>39, 6 %</td>
+          </tr>
+          <tr>
+            <td>0.8</td>
+            <td>500</td>
+            <td>65 %</td>
+            <td>95</td>
+          </tr>
+        </table>
+
+    - Métrica: Cantidad de agentes a los que llega el mensaje.
+        <table>
+          <tr>
+            <th>Tasa de Mutación</th>
+            <th>Cantidad de agentes</th>
+            <th>Algoritmo Genético ( % )</th>
+            <th>Random ( % )</th>
+          </tr>
+          <tr>
+            <td>0.2</td>
+            <td>100</td>
+            <td>82 %</td>
+            <td>81 %</td>
+          </tr>
+          <tr>
+            <td>0.8</td>
+            <td>500</td>
+            <td>29, 6 %</td>
+            <td>30, 6</td>
+          </tr>
+        </table>
+
+**Observamos que el incremento en el número de generaciones mejora la efectividad de ambos algoritmos, sin embargo es este efecto más evidente en el algoritmo genético. La métrica: Cantidad de agentes a los que llega el mensaje, refleja este comportamiento, mostrando un rendimiento superior con mayor cantidad de generaciones.**
+
+<small>En la carpeta Ejemplos puede encontrar los datos anteriormente expuestos extendidos con una colección de grafias (output_image_agree.rar y output_images_notified.rar) que muestran de forma más clara los resultados obtenidos. Es importante que el análisis de las gráficas sea en función del máximo alcanzado por la función graficada y no de los valores de la función en cada punto del espacio evaluado.</small>
 
 ### Recomendaciones:
 - <strong>Análisis exhaustivo de parámetros</strong>: Realizar un estudio profundo de los parámetros que influyen en cada métrica definida. Esto implica identificar los parámetros relevantes, sus rangos de valores válidos y su impacto en el comportamiento de la métrica.
-- <strong>Identificación de necesidades</strong>: Analizar las necesidades de información no cubiertas por las métricas existentes.
+- <strong>Identificación de necesidades</strong>:  Para optimizar la toma de decisiones y el impacto de las estrategias, resulta crucial identificar las necesidades de información que no están siendo cubiertas por las métricas existentes. Esta acción fundamental permite ampliar el espectro de análisis y obtener una visión más completa del panorama.
+
+### Conclusiones
+El desempeño del algoritmo random se ve limitado en comunidades numerosas debido a la baja probabilidad de encontrar soluciones óptimas o cercanas al óptimo en las primeras iteraciones.
+En cambio el algoritmo genético por su capacidad de combinar y mejorar soluciones a través de la reproducción y la mutación se convierte en una herramienta más efectiva para encontrar soluciones de alta calidad en comunidades grandes, donde la búsqueda exhaustiva con el algoritmo aleatorio sería computacionalmente inviable; su potencial de exploración y explotación del espacio de soluciones se incrementa con cada generación, permitiendo la convergencia hacia soluciones cada vez más cercanas al óptimo.
+
+Es importante también garantizar la similitud entre la representación del problema en la simulación y la realidad, pues determina en gran medida la eficiencia del algoritmo en función de la métrica que se utilice.
+
+En nuestro caso, la creación inicial de un grafo aleatorio no arrojó resultados satisfactorios.     Esto se debe a que la conexión entre dos agentes debe estar basada en la similitud de sus   creencias. La ausencia de esta similitud en la representación inicial del grafo impidió que el    algoritmo alcanzara un rendimiento óptimo.
+
+En base a los argumentos presentados, se puede concluir que el algoritmo genético supera al algoritmo aleatorio en escenarios que demandan un alto nivel de eficiencia y precisión, especialmente en comunidades de gran tamaño y problemas de alta complejidad. 
 
 ### Bibliografia:
+Russell, S. J., & Norvig, P. (2021). Artificial intelligence: A modern approach. 4th Edition. Pearson Education.
