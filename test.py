@@ -5,6 +5,7 @@ from save import dividir_y_guardar_textos
 from metaheuristic import algoritmo_genetico, Simulation
 from belief import Belief
 import json,joblib
+from community_detector import get_highly_endorsed_messages 
 
 # num_agents = 20  # Número de agentes
 # num_neighbors = 4  # Número de vecinos por agente
@@ -51,12 +52,11 @@ import json,joblib
 #     sim_results.append(sim_result)
 #     print("-----------------------------------------------------C")
 # #algoritmo_genetico(sim_results,10,5,10,0.25) 
-from cupidCSP2 import Cupid
 
 data_loaded = joblib.load('data.joblib')
 agents = data_loaded['agents']
 graph = data_loaded['graph']
-
-cupid = Cupid(graph,0.1)
-# print(cupid._matches)
+from cupidNew import Cupid
+cupid = Cupid(graph,0.3)
+print(cupid.solucion_emparejamientos)
 print("Koniec")

@@ -66,10 +66,13 @@ class TopicExtractor:
             # Eliminar el prefijo "Topics treated " y los espacios en blanco
             topics_str = topics_str.replace("Topics treated ", "").strip()  
             # Convertir la cadena a un diccionario
-            topics_dict = eval(topics_str)  
-            # Convertir el diccionario en una lista de pares (tema, valor)
-            topics_list = list(topics_dict.items())
-            return topics_list
+            try:
+                topics_dict = eval(topics_str)  
+                # Convertir el diccionario en una lista de pares (tema, valor)
+                topics_list = list(topics_dict.items())
+                return topics_list
+            except:
+                return []
         else:
             return []
         

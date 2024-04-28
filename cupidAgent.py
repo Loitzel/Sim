@@ -34,13 +34,18 @@ class Cupid():
         # Extrae las creencias de los agentes
         creencias_agentes :{int:[Belief]} = self._creencias_de_todos_agentes
 
-        def calcular_similitud(creencias_agente1: List[Belief], creencias_agente2: List[Belief]):
-            # Calcula la similitud basada en la coincidencia de opiniones de los temas
-            coincidencias = sum(1 if abs(valor1.opinion - valor2.opinion) <= 1 else 0 # Ajuste aquí para usar la diferencia absoluta
-                                for valor1, valor2 in list(product(creencias_agente1, creencias_agente2)) 
-                                if valor1.topic == valor2.topic)
-            similitud = coincidencias / max(len(creencias_agente1),len(creencias_agente2))
+        def calcular_similitud(creencias_agente1, creencias_agente2):
+            coincidencias = 0
+            total_temas = 0
+            for valor1 in creencias_agente1:
+                for valor2 in creencias_agente2:
+                    if valor1.topic == valor2.topic:
+                        if abs(valor1.opinion - valor2.opinion) <= 1:
+                            coincidencias += 1
+                        total_temas += 1
+            similitud = coincidencias / max(len(creencias_agente1), len(creencias_agente2))
             return similitud
+
 
         # Crea un modelo de programación lineal entera (MILP) con `pulp`
         pulp.LpSolverDefault.msg = False

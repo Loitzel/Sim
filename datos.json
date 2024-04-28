@@ -6,8 +6,6 @@
         "Health and wellness: -2"
       ],
       "neighbors": [
-        "Agent_1",
-        "Agent_19",
         "Agent_2",
         "Agent_18"
       ]
@@ -26,7 +24,6 @@
         "Religion and spirituality: 1"
       ],
       "neighbors": [
-        "Agent_0",
         "Agent_2",
         "Agent_3",
         "Agent_19"
@@ -219,7 +216,6 @@
       ],
       "neighbors": [
         "Agent_12",
-        "Agent_14",
         "Agent_11",
         "Agent_15",
         "Agent_18"
@@ -245,7 +241,6 @@
         "Religion and spirituality: -1"
       ],
       "neighbors": [
-        "Agent_14",
         "Agent_16",
         "Agent_13",
         "Agent_17"
@@ -327,13 +322,10 @@
   ],
   "graph": {
     "Agent_0": [
-      "Agent_1",
-      "Agent_19",
       "Agent_2",
       "Agent_18"
     ],
     "Agent_1": [
-      "Agent_0",
       "Agent_2",
       "Agent_3",
       "Agent_19"
@@ -405,7 +397,6 @@
     ],
     "Agent_13": [
       "Agent_12",
-      "Agent_14",
       "Agent_11",
       "Agent_15",
       "Agent_18"
@@ -417,7 +408,6 @@
       "Agent_2"
     ],
     "Agent_15": [
-      "Agent_14",
       "Agent_16",
       "Agent_13",
       "Agent_17"
