@@ -92,14 +92,14 @@ class Cupid:
 
         # Representación de la solución
         if pulp.LpStatus[problema.status] == 'Optimal':
-            print("Optimo")
             # Si se encuentra una solución óptima, devolverla como antes
             parejas_logradas = sum(1 for valor in emparejamientos.values() if valor.varValue == 1)
-            solucion = [f"Agente_{agente1} - Agente_{agente2} {calcular_similitud(self._creencias_de_todos_agentes[agente1], self._creencias_de_todos_agentes[agente2])}" for (agente1, agente2), valor in emparejamientos.items() if valor.varValue == 1]
-            print("\n".join(solucion))
+            #solucion = [f"Agente_{agente1} - Agente_{agente2} {calcular_similitud(self._creencias_de_todos_agentes[agente1], self._creencias_de_todos_agentes[agente2])}" for (agente1, agente2), valor in emparejamientos.items() if valor.varValue == 1]
+            #print("\n".join(solucion))
+            print(parejas_logradas)
             return parejas_logradas
 
 
 def get_result(graph):
-    cupid = Cupid(graph,0.3)
+    cupid = Cupid(graph,0.6)
     return cupid.solucion_emparejamientos
