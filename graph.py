@@ -57,7 +57,6 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         importance = degree / num_agents  # Normaliza la importancia entre 0 y 1
         
         agent = Agent(beliefs, decision_rules, [], name=f"Agent_{node}")  # Empty neighbors list for now
-        enviroment.register_agent(agent)
         agents.append(agent)
         
         graph.nodes[node]['agent'] = agent  # Associate agent with the node
@@ -67,6 +66,64 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         agent = graph.nodes[node]['agent']
         neighbors = [graph.nodes[neighbor]['agent'].name for neighbor in graph.neighbors(node)]
         agent.neighbors = neighbors
-    
+
+        enviroment.register_agent(agent)
+
+
+    # Ajusta las conexiones del grafo para asegurar que los vecinos tengan creencias similares
+    # print_agent_and_neighbors(0, graph)
+    adjust_graph(graph)
+    # print_agent_and_neighbors(0, graph)
     #draw_graph(graph)
     return agents, graph
+
+def adjust_graph(graph):
+    """Ajusta las conexiones del grafo para asegurar que los vecinos tengan creencias similares."""
+    for node1, node2 in list(graph.edges):
+        agent1 = graph.nodes[node1]['agent']
+        agent2 = graph.nodes[node2]['agent']
+
+        # Verificar si los agentes cumplen la condición de similitud
+        while not have_similar_beliefs(agent1.beliefs, agent2.beliefs, num_common_topics=2, max_opinion_diff=2):
+            # Elegir un agente al azar para recibir una creencia del otro
+            if random.random() < 0.5:
+                giver, receiver = agent1, agent2
+            else:
+                giver, receiver = agent2, agent1
+
+            
+            # Elegir una creencia al azar del agente que da
+            belief_to_transfer = random.choice(giver.beliefs)
+
+            belief_index = next((i for i, b in enumerate(receiver.beliefs) if b.topic == belief_to_transfer.topic), None) 
+
+            if belief_index is not None:
+                # Sobrescribir la creencia existente
+                receiver.beliefs[belief_index] = belief_to_transfer
+            else:
+                # Agregar la creencia si no existe
+                receiver.beliefs.append(belief_to_transfer)
+
+def have_similar_beliefs(beliefs1, beliefs2, num_common_topics, max_opinion_diff):
+    """Verifica si dos conjuntos de creencias tienen suficientes tópicos en común con opiniones similares."""
+    common_topics = 0
+    for belief1 in beliefs1:
+        for belief2 in beliefs2:
+            if belief1.topic == belief2.topic and abs(belief1.opinion - belief2.opinion) <= max_opinion_diff:
+                common_topics += 1
+                if common_topics >= num_common_topics:
+                    return True
+    return False
+
+
+def print_agent_and_neighbors(node, graph, distance=2):
+    """Imprime las creencias del agente y sus vecinos hasta una distancia dada."""
+    agent = graph.nodes[node]['agent']
+    print(f"Agente {agent.name}: {agent.beliefs}")
+    for dist in range(1, distance + 1):
+        neighbors = nx.single_source_shortest_path_length(graph, node, cutoff=dist)
+        for neighbor, d in neighbors.items():
+            if d == dist:
+                neighbor_agent = graph.nodes[neighbor]['agent']
+                print(f"  Vecino (distancia {d}): {neighbor_agent.name} - {neighbor_agent.beliefs}")
+

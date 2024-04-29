@@ -8,6 +8,9 @@ class Belief:
     def __str__(self):
         return f"{self.topic}: {self.opinion}"
     
+    def __repr__(self):
+        return f"{self.topic}: {self.opinion}"
+    
     def get_belief(self):
         """Returns the belief as a tuple (topic, opinion)."""
         return (self.topic, self.opinion)

@@ -23,15 +23,10 @@ class Topics(Enum):
     TECHNOLOGY_AND_GADGETS = "Technology and gadgets"
     TRANSPORTATION_AND_MOBILITY = "Transportation and mobility"
     JUSTICE_AND_HUMAN_RIGHTS = "Justice and human rights"
-    INNOVATION_AND_ENTREPRENEURSHIP = "Innovation and entrepreneurship"
     COMMUNICATION_AND_MEDIA = "Communication and media"
     COMMUNITY_AND_SOCIETY = "Community and society"
-    BEAUTY_AND_PERSONAL_CARE = "Beauty and personal care"
     HOME_AND_DOMESTIC_LIFE = "Home and domestic life"
-    MONEY_AND_PERSONAL_FINANCE = "Money and personal finance"
     SECURITY_AND_PROTECTION = "Security and protection"
-    CREATIVITY_AND_ARTISTIC_EXPRESSION = "Creativity and artistic expression"
-    LEARNING_AND_PERSONAL_DEVELOPMENT = "Learning and personal development"
     
     def select_random_topics(num_topics):
         """Selects a random set of topics from the Topics enum.

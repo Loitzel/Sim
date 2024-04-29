@@ -5,14 +5,19 @@ from enviroment import Environment
 from message import Message
 from reporter import Reporter
 from topics import Topics
+from agent import Agent
+from cupid import Cupid
 
-
-def get_notified_agents_count():
+def get_notified_agents_count(_):
     reporter = Reporter()
     return len(reporter._notified_agents)
-def get_agreement_agents_count():
+def get_agreement_agents_count(_):
     reporter = Reporter()
     return len(reporter._agreed_agents)
+
+def get_unpairable_pairs(grafo):
+    result = Cupid(grafo,0.3)
+    return result.solucion_emparejamientos
     
 def generate_random_messages(num_messages, num_topics_per_message):
     population = []
@@ -41,16 +46,21 @@ def generate_messages_with_specific_topics(topics, num_messages):
         population.append(message)
     return population
 
-def evaluate_population(population, initial_agents, objective_function):
+def evaluate_message(population, graph, initial_agents, objective_function, reset = True):
     environment = Environment.get_instance()
     for message in population:
+        if message.result > 0:
+            continue
+
         reporter = Reporter()
         # Ejecutar la simulación para cada mensaje
         environment.run_simulation(message, initial_agents)
-        score = objective_function()
+        score = objective_function(graph)
         reporter = Reporter()
         reporter.Reset()
 
+        if reset:
+            environment.Reset()
         # Almacenar el resultado (cantidad de agentes notificados)
         message.result = score
 
@@ -87,7 +97,7 @@ def crossover1(parent1, parent2):
 
     # Limitar el número de creencias a 5 al azar
     random.shuffle(child_beliefs)
-    child_beliefs = child_beliefs[:3]
+    child_beliefs = child_beliefs[:5]
 
     # Crear un nuevo mensaje con las creencias combinadas
     child_message = Message(strength=5, beliefs=child_beliefs)
@@ -120,9 +130,9 @@ def mutate(message, mutation_rate=0.1):
     """Aplica mutaciones al mensaje."""
     mutated_beliefs = []
     for belief in message.beliefs:
-        if random.random() < mutation_rate:
+        if random.random() <= mutation_rate:
             # Decidir si modificar el valor o agregar un nuevo topic
-            if random.random() < 0.5:
+            if random.random() < 0:
                 # Modificar el valor del topic
                 new_opinion = random.randint(-2, 2)
                 mutated_beliefs.append(Belief(belief.topic, new_opinion))
@@ -139,24 +149,29 @@ def mutate(message, mutation_rate=0.1):
     mutated_message = Message(strength=message.strength, beliefs=mutated_beliefs)
     return mutated_message
 
-def reproduce(parent1, parent2, global_best, mutation_rate=0.1):
+def reproduce(parent1, parent2, mutation_rate=0.1):
     """Realiza el cruce y la mutación para crear un nuevo hijo."""
-    child_message = crossover2(parent1, parent2)
+    child_message = crossover1(parent1, parent2)
     mutated_child = mutate(child_message, mutation_rate)
     return mutated_child
 
-def genetic_algorithm(population_size, num_parents, num_generations, mutation_rate, initial_agents, objective_function = get_notified_agents_count):
+def genetic_algorithm(population_size, graph,  num_parents, num_generations, mutation_rate, initial_agents, objective_function = get_notified_agents_count, num_constant_bests = 1, randomSearch = False, initial_message = None):
     # Generar la población inicial
     population = generate_random_messages(population_size, num_topics_per_message=5)
-    global_best = (None, 0)
+    
+    if initial_message is not None:
+        population = population + [initial_message]
+
     evolution_list = []
     average_list = []
+    global_best = [None, 0]
+    best_score_persistance = 10
 
     previous_best = None
     for generation in range(num_generations):
         print(generation)
         # Evaluar la población
-        evaluate_population(population, initial_agents, objective_function)
+        evaluate_message(population, graph, initial_agents, objective_function)
 
         if previous_best is not None:
             population = population + previous_best
@@ -183,14 +198,48 @@ def genetic_algorithm(population_size, num_parents, num_generations, mutation_ra
             parent1 = random.choice(parents)
             parent2 = random.choice(parents)
             # Reproducir (cruce y mutación)
-            child = reproduce(parent1, parent2, global_best[0], mutation_rate)
+            child = reproduce(parent1, parent2, mutation_rate)
 
             # Agregar el hijo a la nueva población
             new_population.append(child)
 
         # Reemplazar la población actual con la nueva generación
-        previous_best = population[:5]
-        # population = generate_random_messages(population_size, num_topics_per_message=5)
-        population = new_population
+        if previous_best == population[:num_constant_bests]:
+            best_score_persistance -= 1
+        
+        if best_score_persistance > 0:
+            previous_best = population[:num_constant_bests]
+            if initial_message is not None:
+                previous_best = previous_best + [initial_message]
+        else:
+            best_score_persistance = 10
+            previous_best = generate_random_messages(num_constant_bests, num_topics_per_message=5)
+            if initial_message is not None:
+                previous_best = previous_best + [initial_message]
+            
+
+        if randomSearch:
+            population = generate_random_messages(population_size, num_topics_per_message=5)
+        else:
+            population = new_population
 
     return global_best[0], evolution_list
+
+def optimize_graph(number_of_iterations, population_size, graph,  num_parents, num_generations, mutation_rate, initial_agents, objective_function = get_notified_agents_count, num_constant_bests = 1, randomSearch = False):
+    
+    best_message = None
+    message_list = []
+    result_list = []
+
+    environment = Environment()
+    
+    for iteration in range(number_of_iterations):
+        best_message, _ = genetic_algorithm(population_size, graph,  num_parents, num_generations, mutation_rate, initial_agents, objective_function, num_constant_bests, randomSearch, best_message)
+        evaluate_message([best_message], graph, initial_agents, objective_function, reset=False)
+
+        message_list.append(best_message)
+        result_list.append(best_message.result)
+        environment.SetCurrentAsDefault()
+
+    return message_list, result_list
+

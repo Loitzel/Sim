@@ -56,7 +56,7 @@ from community_detector import get_highly_endorsed_messages
 data_loaded = joblib.load('data.joblib')
 agents = data_loaded['agents']
 graph = data_loaded['graph']
-from cupidNew import Cupid
+from cupid import Cupid
 cupid = Cupid(graph,0.3)
 print(cupid.solucion_emparejamientos)
 print("Koniec")

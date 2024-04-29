@@ -22,14 +22,17 @@ class Environment:
         return cls._instance
 
 
-    def register_agent(self, agent, setOriginal = False):
+    def register_agent(self, agent, setOriginal = True):
 
         if setOriginal:
-            self.originalAgents[agent.name] = agent.clone
+            self.originalAgents[agent.name] = agent.clone()
         self.agents[agent.name] = agent
 
     def Reset(self):
         self.agents = self.originalAgents
+
+    def SetCurrentAsDefault(self):
+        self.originalAgents = self.agents
 
     def send_message(self, message : Message):
         message.age += 1
@@ -39,7 +42,7 @@ class Environment:
 
     def run_simulation(self, initial_message : Message, initial_agents):
         messages = []
-        agents_notified = {}
+
         for agent in initial_agents:
             new_message = initial_message.clone()
             new_message.destination = agent.name
@@ -59,6 +62,5 @@ class Environment:
 
             messages.extend(self.replies)
             self.replies = []
-        
-        return len([agent for agent,val in agents_notified.items() if val == True])
+
         

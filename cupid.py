@@ -10,10 +10,14 @@ from reporter import Reporter
 class Cupid:
     _creencias_de_todos_agentes: Dict[int, List[Belief]]
     solucion_emparejamientos: str
-
+    notified = set()
     def __init__(self, grafo_agentes,porcentajeEmparejamiento):
         self._creencias_de_todos_agentes: Dict[int, List[Belief]] = self._obtener_creencias_agentes(grafo_agentes)
         self.solucion_emparejamientos = self._encontrar_emparejamientos(porcentajeEmparejamiento)
+        self.reporter = Reporter()
+        self.notified = self.reporter._notified_agents
+        
+        
 
     def _obtener_creencias_agentes(self,grafo):
         """Obtiene dict {nombre : beliefs} para cada nodo del grafo."""
@@ -53,13 +57,6 @@ class Cupid:
                                                 ),
                                                cat='Binary')
         
-        # Introducir una variable de decisión adicional para la similitud
-        similitud = pulp.LpVariable.dicts("Similitud",
-                                          ((agente1, agente2)
-                                           for agente1 in self._creencias_de_todos_agentes
-                                           for agente2 in self._creencias_de_todos_agentes
-                                           if agente1 < agente2),
-                                          cat='Binary')
         # Función objetivo
         problema += pulp.lpSum(emparejamientos[agente1, agente2]
                            for agente1 in self._creencias_de_todos_agentes 
@@ -73,8 +70,9 @@ class Cupid:
         for agente in self._creencias_de_todos_agentes:
             restriccion = pulp.lpSum(emparejamientos[agente, otro_agente] + emparejamientos[otro_agente, agente]
                              for otro_agente in self._creencias_de_todos_agentes
-                             if otro_agente != agente) <= 1
+                             if otro_agente != agente and ((agente in self.notified) and (otro_agente in self.notified))) <= 1
             problema += restriccion    
+            
        
        #Similitud
         for agente1 in self._creencias_de_todos_agentes:
@@ -92,9 +90,14 @@ class Cupid:
 
         # Representación de la solución
         if pulp.LpStatus[problema.status] == 'Optimal':
-            print("Optimo")
             # Si se encuentra una solución óptima, devolverla como antes
             parejas_logradas = sum(1 for valor in emparejamientos.values() if valor.varValue == 1)
-            solucion = [f"Agente_{agente1} - Agente_{agente2} {calcular_similitud(self._creencias_de_todos_agentes[agente1], self._creencias_de_todos_agentes[agente2])}" for (agente1, agente2), valor in emparejamientos.items() if valor.varValue == 1]
-            print("\n".join(solucion))
+            #solucion = [f"Agente_{agente1} - Agente_{agente2} {calcular_similitud(self._creencias_de_todos_agentes[agente1], self._creencias_de_todos_agentes[agente2])}" for (agente1, agente2), valor in emparejamientos.items() if valor.varValue == 1]
+            #print("\n".join(solucion))
+            print(parejas_logradas)
             return parejas_logradas
+
+
+def get_result(graph):
+    cupid = Cupid(graph,0.6)
+    return cupid.solucion_emparejamientos
