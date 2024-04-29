@@ -60,9 +60,18 @@ Interrogantes a las que dan respuesta los resultados de la simulación:
 - Cantidad de comunidades que se pueden formar en la red social: En función de las creencias de los agentes.
 
 ### **Componente de procesamiento de lenguage natural:**
+Siendo nuestro objetvivo maximixar los resultados de una métrica específica en un proceso de difusión de un mensaje, resulta beneficioso tener la capacidad de ajustar el contenido del mensaje en función de la aceptación que pueda recibir en una red social. Para lograrlo, insertamos el mensaje deseado en una colección de mensajes que servirán como prueba para la comunidad, con el fin de evaluar sus creencias. El resultado de esta evaluación proporciona un mensaje optimo en función de la metrica utilizada que abarca temas específicos, cada uno con un grado de positividad asociado.Luego con el LLM, modificamos el mensaje inicial que se pretende difundir, ajustándolo en función de los temas y categorías de los temas del mejor mensaje extraído de la colección utilizada para evaluar las creencias de los individuos de la red social, logrando optimizar la efectividad del mensaje a través de la alineación con las percepciones y preferencias de la comunidad objetivo. A continuación mostramos ejemplos:
 
-- `Libreria google.generativeai`: Permite la creación de aplicaciones de IA generativa basada en modelos de última generación como Gemini, de Google AI.
-- ``Uso``: Obtención de un mensaje estructurado a partir de un mensaje en lenguaje natural y viceversa (con un mensaje alterado obtención de un mensaje en lenguaje natural).
+1. ``Mensaje original``: Este momento marca un hito en la historia delentretenimiento. Con el surgimiento de los servicios de streaming, hemospresenciado una revolución en  la forma en que disfrutamos del cine, lasseries de televisión y la música. Quiero destacar el impacto significativoque estas plataformas, como Netflix, Hulu y     Spotify, han tenido ennuestra sociedad. Han democratizado el acceso al entretenimiento,permitiendo a personas de todas las procedencias disfrutar de una ampliagama  de contenido desde la comodidad de sus hogares. Este cambio no soloha transformado la industria del entretenimiento, sino que también hacreado nuevas oportunidades    para los creadores de contenido, impulsandola creatividad y la diversidad en la narrativa. Es un momento emocionantepara la cultura y el arte, y estoy emocionado de     ver cómo continuaráevolucionando nuestro mundo del entretenimiento en los próximos años. \
+``Temas del mensaje original``: [('Technology and society', 2), ('Leisure andentertainment', 2), ('Culture and traditions', 2)] \
+`Temas que se quieren incluir en el mensaje resultante`: {'Communication and media': 0, 'Food and nutrition':2, 'Environment and sustainability': -2, 'Fashion and style': -1}`\
+``Mensaje resultante``: Mientras el mundo del entretenimiento se adentra en unnuevo capítulo, no podemos dejar de reflexionar sobre la profundatransformación que han  traído los servicios de streaming. Su irrupción hademocratizado el acceso a un vasto panorama de películas, series y música,trascendiendo fronteras geográficas y  socioeconómicas. Sin embargo, sibien estas plataformas han fomentado la creatividad y la diversidad en lanarración, es esencial abordar sus implicaciones más amplias  en nuestrotejido social. Para navegar en este panorama en evolución, debemospromover un enfoque equilibrado que priorice la nutrición de nuestrastradiciones  culturales junto con el abrazo de nuevas formas de expresión.Solo a través de un diálogo reflexivo y una participación activa podremosdar forma a un futuro del    entretenimiento que sea verdaderamenteinclusivo y enriquecedor."
+2. ``Mensaje original``: Estamos en un momento de cambio para la educación. Conla implementación de nuevas metodologías y tecnologías en las aulas,estamos presenciando una  evolución en la forma en que enseñamos yaprendemos. Quiero resaltar el impacto positivo que estas innovaciones,como la enseñanza personalizada y el aprendizaje en     línea, estánteniendo en nuestros estudiantes y en el sistema educativo en general.Estas nuevas herramientas están proporcionando oportunidades deaprendizaje más     flexibles y accesibles para una amplia gama deestudiantes, permitiendo que cada uno pueda alcanzar su máximo potencial.Este cambio no solo está transformando la forma    en que los estudiantesadquieren conocimientos, sino que también está preparando a nuestra fuerzalaboral para los desafíos del futuro. Es un momento emocionante para    la educación, y estoy ansioso por ver cómo estas innovaciones seguiránmejorando nuestras escuelas y comunidades en los próximos años. \
+``Temas del mensaje original``: [('Education and learning', 2)]
+\
+`Temas que se quieren incluir en el mensaje resultante`: {'Home and domestic life': -2, 'Technology andsociety': 0, 'Transportation and mobility': -1} \
+``Mensaje resultante``:  Mientras navegamos por los cambios que se estánproduciendo en la educación, es esencial considerar el impacto en el hogary la vida familiar. Las   metodologías y tecnologías emergentes debenmejorar y complementar el entorno de aprendizaje en el hogar, fomentandola interacción familiar y la participación activa    en el viaje educativode los niños. Si bien la tecnología puede mejorar la accesibilidad, nodebe aislar a los estudiantes de las conexiones humanas y lasexperiencias    del mundo real. Además, debemos abordar las disparidadesen el acceso a la tecnología y garantizar que todos los estudiantes tenganlas mismas oportunidades de    beneficiarse de estas innovaciones,independientemente de sus circunstancias. Al equilibrar el papel de latecnología con el valor de las interacciones humanas y el   apoyofamiliar, podemos crear un sistema educativo que empodere a losestudiantes y enriquezca sus vidas dentro y fuera del aula."
+- `Libreria google.generativeai`: Permite la creación de aplicaciones de IA generativa basada en modelos de última generación como Gemini, de Google AI.>
 
 ### **Componente de conocimiento: `class Cupid`**
 Nuestro objetivo es, a través de un problema de optimización lineal, buscar la cantidad máxima de emparejamientos excluyentes que podemos formar con los agentes una vez terminada la simulación siendo esta la función objetivo. Cada agente puede estar en un único emparejamineto y su similitud debe tener un umbral predefinido que podemos variar en dependencia de las interrogantes que tengamos.
@@ -80,8 +89,16 @@ Partiendo de la hipótesis de que la combinación de dos mensajes cercanos al "�
 
 Este proceso se repite durante un número específico de generaciones, permitiendo que los mensajes evolucionen y se ajusten para mejorar su capacidad de ser adoptados por la mayoría de los agentes en el sistema. Al final del proceso, el algoritmo retorna el mejor mensaje encontrado y una lista de los mejores resultados a lo largo de las generaciones. 
 
-![](./Examples/Figure_1.png)
-![](./Examples/Figure_2_parents.png)
-![](./Examples/Figure_3_mutation_rate.png)
-![](./Examples/Figure_4_probability.png)
-![](./Examples/Figure_5_num_neighborgs.png)
+### Comparaciones para evaluar correctitud :
+- Métrica: Cantidad de agentes que estan de acuerdo con el mensaje.
+![Mpetrica : Cantidad de agentes que estan de acuerdo con el mensaje](./Examples/fig_1.jpg)
+![](./Examples/fig_2.jpg)
+![](./Examples/fig_3.jpg)
+![](./Examples/fige_4.jpg)
+![](./Examples/fig_5.jpg)
+
+### Recomendaciones:
+- <strong>Análisis exhaustivo de parámetros</strong>: Realizar un estudio profundo de los parámetros que influyen en cada métrica definida. Esto implica identificar los parámetros relevantes, sus rangos de valores válidos y su impacto en el comportamiento de la métrica.
+- <strong>Identificación de necesidades</strong>: Analizar las necesidades de información no cubiertas por las métricas existentes.
+
+### Bibliografia:
