@@ -257,7 +257,7 @@ A continuación, se presentan gráficos que ilustran una comparativa de los resu
           <tr>
             <td>500</td>
             <td>30 %</td>
-            <td>37, 4 %</td>
+            <td>27, 4 %</td>
           </tr>
         </table>
 
@@ -446,7 +446,7 @@ A continuación, se presentan gráficos que ilustran una comparativa de los resu
           </tr>
         </table>
 
-    - Métrica: Cantidad de agentes a los que llega el mensaje.
+    - Métrica: Cantidad de agentes que están de acuerdo con el mensaje.
         <table>
           <tr>
             <th>Tasa de Mutación</th>
