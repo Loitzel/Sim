@@ -225,7 +225,8 @@ def genetic_algorithm(population_size, graph,  num_parents, num_generations, mut
 
     return global_best[0], evolution_list
 
-def optimize_graph(number_of_iterations, population_size, graph,  num_parents, num_generations, mutation_rate, initial_agents, objective_function = get_notified_agents_count, num_constant_bests = 1, randomSearch = False):
+def optimize_graph(number_of_iterations, population_size, graph,  num_parents, num_generations, mutation_rate, 
+                   initial_agents, objective_function = get_notified_agents_count, num_constant_bests = 1, randomSearch = False):
     
     best_message = None
     message_list = []

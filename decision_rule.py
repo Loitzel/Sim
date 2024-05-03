@@ -131,43 +131,5 @@ class RandomDecisionRule(DecisionRule):
         report = f"{agentName}: Mensaje transmitido aleatoriamente."
         return report
 
-class AdjustBeliefsRule():
 
-    """Decision rule to adjust the message based on agreement and interest."""
-    def change(self, agent, message_interest, message_agreement, message: Message):
-        
-        agent_beliefs = agent.beliefs
-        agent_topics = [agent_belief.topic for agent_belief in agent_beliefs]
-        if len(message_agreement) == 0:
-            return
-        else:
-            for topic, opinion in message.items():
-                # try:
-                #     belief = [agent_bel for agent_bel in agent_beliefs if agent_bel.opinion == opinion] 
-                #     if len(belief) > 0:
-                #         belief = belief[0]
-                #         if opinion >= 1:
-                #             belief.opinion = min(2, opinion + 1)
-                #         elif opinion <= -1:
-                #             belief.opinion = max(-2, opinion - 1)
-                        
-                #         new_beliefs.append(belief)
-                # except KeyError:
-                #     agent_beliefs.append(Belief(topic,opinion))
 
-                if topic in agent_topics:
-                    agent_belief = [agent_belief for agent_belief in agent_beliefs if agent_belief.topic == topic][0]
-                    
-                    #Delete all beliefs with that topic
-                    agent_beliefs = [agent_belief for agent_belief in agent_beliefs if agent_belief.topic != topic]
-
-                    if opinion >= 1:
-                        agent_belief.opinion = min(2, opinion + 1)
-                    elif opinion <= -1:
-                        agent_belief.opinion = max(-2, opinion - 1)
-
-                    agent_beliefs.append(agent_belief)
-
-        agent.beliefs = agent_beliefs
-        return
-    

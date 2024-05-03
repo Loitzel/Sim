@@ -15,5 +15,8 @@ class Belief:
         """Returns the belief as a tuple (topic, opinion)."""
         return (self.topic, self.opinion)
     
+    def clone(self):
+        return Belief(self.topic, self.opinion)
+    
     def __eq__(self, value: object) -> bool:
         return self.topic == value.topic

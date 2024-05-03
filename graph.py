@@ -2,7 +2,9 @@ import random
 import networkx as nx
 from agent import Agent
 from belief import Belief
+from beliefs_rule import *
 from decision_rule import *
+from communication_rules import *
 from topics import Topics
 from enviroment import Environment
 import matplotlib.pyplot as plt
@@ -51,12 +53,31 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         disagree_rule = DisagreementWithMessageRule()
         adjust_rule = AdjustMessageRule()
         random_rule = RandomDecisionRule()
+
         decision_rules = [agree_rule, adjust_rule, disagree_rule]
+
+        confirmation_belief_rule = ConfirmationBiasRule()
+        correlation_belief_rule = CorrelationRule()
+        denial_belief_rule = DenialRule()
+
+        beliefs_rules = [confirmation_belief_rule, correlation_belief_rule, denial_belief_rule]
+
+        talkative_rule = TalkativeAgentRule()
+        shy_rule = ShyAgentRule()
+        excited_rule = ExcitedAgentRule()
+        gossip_rule = GossipAgentRule()
+
+        communication_rules = [talkative_rule, shy_rule, excited_rule, gossip_rule, gossip_rule, talkative_rule, talkative_rule]
+
+        #Elegimos una regla de comunicacion al azar para este agente
+        comm_rule = random.choice(communication_rules)
+        # comm_rule = gossip_rule
+
         
         # Crea el agente con la importancia basada en el grado
         importance = degree / num_agents  # Normaliza la importancia entre 0 y 1
         
-        agent = Agent(beliefs, decision_rules, [], name=f"Agent_{node}")  # Empty neighbors list for now
+        agent = Agent(beliefs, decision_rules, beliefs_rules, comm_rule, [], name=f"Agent_{node}")  # Empty neighbors list for now
         agents.append(agent)
         
         graph.nodes[node]['agent'] = agent  # Associate agent with the node
@@ -66,7 +87,7 @@ def generate_agents_from_graph(num_agents, num_neighbors, probability):
         agent = graph.nodes[node]['agent']
         neighbors = [graph.nodes[neighbor]['agent'].name for neighbor in graph.neighbors(node)]
         agent.neighbors = neighbors
-
+        agent.instantiate_neighbor_hypothesis()
         enviroment.register_agent(agent)
 
 

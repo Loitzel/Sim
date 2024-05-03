@@ -1,7 +1,8 @@
 from abc import ABC, abstractmethod
+from belief import Belief
+from communication_rules import CommunicationRule
 from message import Message
 from reporter import Reporter
-from decision_rule import AdjustBeliefsRule
 
 class AgentInterface(ABC):
     """Abstract base class for agent interfaces."""
@@ -28,12 +29,16 @@ class AgentInterface(ABC):
 
 class Agent(AgentInterface):
     """Agent class implementing the AgentInterface."""
-    def __init__(self, beliefs, decision_rules, neighbors, name=''):
+    def __init__(self, beliefs, decision_rules, beliefs_rules, communication_rule : CommunicationRule,  neighbors, name=''):
         """Initializes the agent with beliefs and decision rules."""
         self.name = name
         self.beliefs = beliefs  # Agent's beliefs
         self.decision_rules = decision_rules  # Decision rules for deliberation
+        self.beliefs_rules = beliefs_rules
         self.neighbors = neighbors  # Add neighbors attribute
+        self.communication_rule = communication_rule
+        self.neighbors_beliefs_hypothesis = {}
+
 
     def to_dict(self):
         return { 'name' : self.name,
@@ -42,18 +47,25 @@ class Agent(AgentInterface):
         
     def receive_message(self, original_message: Message):
         """Receives a message and initiates the deliberation process."""
+        self.updateNeighborsBeliefs(original_message)
+
         reporter = Reporter()
         reporter.reportAgent(self.name)
-        adjustBelief = AdjustBeliefsRule()
 
         message = original_message.clone()
 
-        message_beliefs = message.get_beliefs()
+        message_beliefs = message.get_beliefs_as_dict()
         agent_beliefs = {belief.topic: belief.opinion for belief in self.beliefs}
         agreement_with_message, interest_on_message, common_topics = self.calculate_agreement_and_interest(agent_beliefs, message_beliefs)
         
-        adjustBelief.change(self, interest_on_message, agreement_with_message, message_beliefs)
-        
+
+        while True:
+            change = False
+            for rule in self.beliefs_rules:
+                change = change or rule.change(self, interest_on_message, agreement_with_message, message)
+            if not change:
+                break
+
         self.deliberate(message, agreement_with_message, interest_on_message, common_topics)
 
     def deliberate(self, message : Message, agreement, interest, common_topics):
@@ -70,11 +82,16 @@ class Agent(AgentInterface):
             for neighbor in self.neighbors:
                 if neighbor == message.source:
                     continue
-                new_message = new_message.clone()
-                new_message.source = self.name
-                new_message.destination = neighbor
-                agent_report = rule.report(self.name, new_message)
-                self.execute_action(new_message, agent_report)
+                
+                neighbor_beliefs = self.neighbors_beliefs_hypothesis[neighbor].getBeliefs()
+
+                if self.communication_rule.communicate(interest, message.beliefs, 
+                                                    neighbor_beliefs, message):
+                    new_message = new_message.clone()
+                    new_message.source = self.name
+                    new_message.destination = neighbor
+                    agent_report = rule.report(self.name, new_message)
+                    self.execute_action(new_message, agent_report)
         
     def execute_action(self, message, agent_report):
         
@@ -101,9 +118,58 @@ class Agent(AgentInterface):
 
         return agreement_scores, len(common_topics), common_topics
     
+    def updateNeighborsBeliefs(self, message : Message):
+        neighbor = message.source
+
+        if neighbor is None:
+            return
+        
+        for belief in message.beliefs:
+            self.neighbors_beliefs_hypothesis[neighbor].addBeliefHypothesis(belief)
+
+        self.neighbors_beliefs_hypothesis[neighbor].tick()
+
+    def instantiate_neighbor_hypothesis(self):
+        for neighbor in self.neighbors:
+            self.neighbors_beliefs_hypothesis[neighbor] = BeliefsHypothesisList()
+
     def clone(self):
-        return Agent(self.beliefs, self.decision_rules, self.neighbors, self.name)
+        clone = Agent(self.beliefs, self.decision_rules, self.beliefs_rules, self.communication_rule, self.neighbors, self.name)
+        clone.neighbors_beliefs_hypothesis = self.neighbors_beliefs_hypothesis
+        return clone
     
     def __str__(self):
         return f'{self.name} \n{[(belief.topic, belief.opinion) for belief in self.beliefs]}'
-                
+    
+class NeighborBeliefHypothesis():
+    def __init__(self, belief, age = 3):
+        self.belief = belief
+        self.age = age
+
+class BeliefsHypothesisList():
+
+    def __init__(self):
+        self.hypothesis = []
+
+    def addBeliefHypothesis(self, belief : Belief):
+        
+        for element in self.hypothesis:
+            if element.belief.topic == belief.topic:
+                element.belief.opinion += belief.opinion
+                element.age = 3
+                return
+        
+        self.hypothesis.append(NeighborBeliefHypothesis(belief.clone()))
+
+    def getBeliefs(self):
+        beliefs = []
+        for element in self.hypothesis:
+            beliefs.append(element.belief)
+        
+        return beliefs
+    
+    def tick(self):
+        for element in self.hypothesis:
+            element.age -= 1
+            if element.age <= 0:
+                self.hypothesis.remove(element)

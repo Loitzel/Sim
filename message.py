@@ -27,9 +27,12 @@ class Message:
         """Returns a list of topics covered in the message."""
         return [belief.topic for belief in self.beliefs]
 
-    def get_beliefs(self):
+    def get_beliefs_as_dict(self):
         """Returns a dictionary of beliefs and their opinions."""
-        return {belief.topic: belief.opinion for belief in self.beliefs}
+        dictionary = {}
+        for belief in self.beliefs:
+            dictionary[belief.topic] = belief.opinion
+        return dictionary
 
     def change_belief(self, topic, new_opinion):
         """
@@ -42,6 +45,11 @@ class Message:
                 belief.opinion = new_opinion
                 return
         self.beliefs.append(Belief(topic, new_opinion))
+    
+    def get_opinion_for_topic(self, topic):
+        for belief in self.beliefs:
+            if belief.topic == topic:
+                return belief.opinion 
     
     def increase_belief(self, topic):
         """Increases the opinion of the belief with the specified topic by 1."""
