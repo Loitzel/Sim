@@ -157,6 +157,16 @@ class MessageGenerator:
         
         # Generar el mensaje
         response = self.model.generate_content(instructions)
+        if response:
+            lines = response.text.strip().split('\n')
+            # Buscar la última línea que comienza con "Modified output:"
+            for line in reversed(lines):
+                if line.startswith("Modified output:"):
+                    # Tomar todo después de "Modified output:" y devolverlo
+                    return line.replace("Modified output:", "").strip()
+        # if response:
+        #     # Eliminar el prefijo "Topics treated " y los espacios en blanco
+        #     response = response.replace("Modified output: ", "").strip()  
         return response.text.strip()
     
     def generate_message_given_topics(self, topics):

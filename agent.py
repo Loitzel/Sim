@@ -3,7 +3,8 @@ from belief import Belief
 from communication_rules import CommunicationRule
 from message import Message
 from reporter import Reporter
-
+from beliefs_rule import BeliefRule
+from typing import List
 class AgentInterface(ABC):
     """Abstract base class for agent interfaces."""
     @abstractmethod
@@ -29,7 +30,7 @@ class AgentInterface(ABC):
 
 class Agent(AgentInterface):
     """Agent class implementing the AgentInterface."""
-    def __init__(self, beliefs, decision_rules, beliefs_rules, communication_rule : CommunicationRule,  neighbors, name=''):
+    def __init__(self, beliefs, decision_rules, beliefs_rules:List[BeliefRule], communication_rule : CommunicationRule,  neighbors, name=''):
         """Initializes the agent with beliefs and decision rules."""
         self.name = name
         self.beliefs = beliefs  # Agent's beliefs

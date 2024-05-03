@@ -140,11 +140,11 @@ def have_similar_beliefs(beliefs1, beliefs2, num_common_topics, max_opinion_diff
 def print_agent_and_neighbors(node, graph, distance=2):
     """Imprime las creencias del agente y sus vecinos hasta una distancia dada."""
     agent = graph.nodes[node]['agent']
-    print(f"Agente {agent.name}: {agent.beliefs}")
+    #print(f"Agente {agent.name}: {agent.beliefs}")
     for dist in range(1, distance + 1):
         neighbors = nx.single_source_shortest_path_length(graph, node, cutoff=dist)
         for neighbor, d in neighbors.items():
             if d == dist:
                 neighbor_agent = graph.nodes[neighbor]['agent']
-                print(f"  Vecino (distancia {d}): {neighbor_agent.name} - {neighbor_agent.beliefs}")
+                #print(f"  Vecino (distancia {d}): {neighbor_agent.name} - {neighbor_agent.beliefs}")
 

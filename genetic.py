@@ -68,11 +68,11 @@ def select_parents(population, num_parents):
     """Selecciona los padres con base en el atributo 'result' de los mensajes."""
     # Ordenar la población por el atributo 'result' (de mayor a menor)
     population.sort(key=lambda message: message.result, reverse=True)
-    print([message.result for message in population])
+    #print([message.result for message in population])
     
     # Seleccionar los primeros 'num_parents' mensajes como padres
     parents = population[:num_parents]
-    print([message.result for message in parents])
+    #print([message.result for message in parents])
     return parents
 
 def crossover1(parent1, parent2):
